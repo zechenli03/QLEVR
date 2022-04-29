@@ -46,13 +46,13 @@ python gen_2d.py --split 'train' --start_idx 0 --num_images 100 --output_dir out
 After this command terminates you should have 100 images stored in output/2d_scene/train/full_images like this:
 
 <div align="center">
-  <img src="images/2d_full_train_011001.png" width="300px">
-  <img src="images/2d_full_train_011002.png" width="300px">
-  <img src="images/2d_full_train_011003.png" width="300px">
+  <img src="images/2d_full_train_011001.png" width="260px">
+  <img src="images/2d_full_train_011002.png" width="260px">
+  <img src="images/2d_full_train_011003.png" width="260px">
   <br>
-  <img src="images/2d_full_train_011008.png" width="300px">
-  <img src="images/2d_full_train_011009.png" width="300px">
-  <img src="images/2d_full_train_011011.png" width="300px">
+  <img src="images/2d_full_train_011008.png" width="260px">
+  <img src="images/2d_full_train_011009.png" width="260px">
+  <img src="images/2d_full_train_011011.png" width="260px">
 </div>
 
 The file `output/2d_scene/train/scenes_2d_train.json` will contain ground-truth locations, bounding boxes, attributes 
@@ -68,13 +68,13 @@ You can check my code about [rendering using Colab here](image_generation/gen_3d
 Then you should have some rendered images stored in `output/3d_scene/train` like these:
 
 <div align="center">
-  <img src="images/3d_train_011001.png" width="400px" height="300px">
-  <img src="images/3d_train_011002.png" width="400px" height="300px">
-  <img src="images/3d_train_011003.png" width="400px" height="300px">
+  <img src="images/3d_train_011001.png" width="260px" height="195px">
+  <img src="images/3d_train_011002.png" width="260px" height="195px">
+  <img src="images/3d_train_011003.png" width="260px" height="195px">
   <br>
-  <img src="images/3d_train_011008.png" width="400px" height="300px">
-  <img src="images/3d_train_011009.png" width="400px" height="300px">
-  <img src="images/3d_train_011011.png" width="400px" height="300px">
+  <img src="images/3d_train_011008.png" width="260px" height="195px">
+  <img src="images/3d_train_011009.png" width="260px" height="195px">
+  <img src="images/3d_train_011011.png" width="260px" height="195px">
 </div>
 
 The file `output/3d_scene/train/scenes_3d_train.json` will contain rendering settings, ground-truth locations, 
