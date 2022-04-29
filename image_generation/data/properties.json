@@ -1,0 +1,52 @@
+{
+  "obj_shapes": {
+    "triangle": {
+      "triangular pyramid": "TriangularPyramid",
+      "triangular prism": "TriangularPrism"
+    },
+    "circle": {
+      "cone": "Cone",
+      "sphere": "Sphere",
+      "cylinder": "Cylinder"
+    },
+    "rectangle": {
+      "cube": "Cube",
+      "square pyramid": "Pyramid"
+    }
+},
+  "obj_colors": {
+    "gray": [87, 87, 87],
+    "red": [173, 35, 35],
+    "blue": [42, 75, 215],
+    "green": [29, 105, 20],
+    "brown": [129, 74, 25],
+    "purple": [129, 38, 192],
+    "cyan": [41, 208, 208],
+    "yellow": [255, 238, 51]
+  },
+  "obj_materials": {
+    "wooden": ["Wooden_1", "Wooden_2"],
+    "marble": ["Marble_1", "Marble_2"],
+    "rubber": "Rubber",
+    "metal": "Metal",
+    "leather": ["Leather_1", "Leather_2"]
+  },
+  "plane_colors": ["gray", "brown", "black"],
+  "plane_shapes": [
+    "triangle", "rectangle", "circle"
+  ],
+  "plane_materials_grayscale": {
+    "wooden":  [0.85, 0.85, 0.85],
+    "marble": [0.15, 0.15, 0.15]
+  },
+  "sizes": {
+    "large": 8.0,
+    "small": 5.0
+  },
+  "plane_size": {
+    "width": 4.0,
+    "length": 4.0
+  }
+}
+
+

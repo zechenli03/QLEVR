@@ -1,0 +1,1755 @@
+[
+  {
+    "text": [
+      "On the <PC> <PM> <PS> plane<sp>, no <st>s except the <Z> <C> <M> <S><so> are <Z2> <C2> <M2> <S2><sn>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, every <st> except the <Z> <C> <M> <S><so> is not <se> <Z2> <C2> <M2> <S2>; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all_valid", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>", "<Z2>", "<C2>", "<M2>", "<S2>", "<so>", "<se>", "<sn>", "<st>"], "type": "attributes_subset_no_except", "kind": "object"},
+      {"input_states": [2], "type": "no_except", "kind": "object"}
+    ],
+    "constraints": [],
+    "quantifiers": ["no_except"],
+    "type": ["existence1"]
+  },
+  {
+    "text": [
+      "On the <PC> <PM> <PS> plane<sp>, every <st> except the <Z> <C> <M> <S><so> is <se> <Z2> <C2> <M2> <S2>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, no <st>s except the <Z> <C> <M> <S><so> are not <Z2> <C2> <M2> <S2><sn>; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all_valid", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>", "<Z2>", "<C2>", "<M2>", "<S2>", "<so>", "<se>", "<sn>", "<st>"], "type": "attributes_subset_every_except", "kind": "object"},
+      {"input_states": [2], "type": "every_except", "kind": "object"}
+    ],
+    "constraints": [],
+    "quantifiers": ["every_except"],
+    "type": ["existence1"]
+  },
+  {
+    "text": [
+      "Whether all the <Z> <C> <M> <S>s are on the <PC> <PM> <PS> plane<sp>?",
+      "Every <Z> <C> <M> <S> is on the <PC> <PM> <PS> plane<sp>; is it right?",
+      "It is not the case that some <Z> <C> <M> <S> is not on the <PC> <PM> <PS> plane<sp>; is it right?",
+      "No <Z> <C> <M> <S> is not on the <PC> <PM> <PS> plane<sp>; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all_valid", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type":  "filter_valid", "kind": "object"},
+      {"input_states": [1, 2], "type": "whether_all", "kind": "object"}
+    ],
+    "constraints": [],
+    "quantifiers": ["all"],
+    "type": ["existence1"]
+  },
+  {
+    "text": [
+      "It is not the case that all the <Z> <C> <M> <S>s are on the <PC> <PM> <PS> plane<sp>; is it right?",
+      "It is not the case that no <Z> <C> <M> <S> is not on the <PC> <PM> <PS> plane<sp>; is it right?",
+      "Some <Z> <C> <M> <S> is not on the <PC> <PM> <PS> plane<sp>; is it right?",
+      "It is not the case that every <Z> <C> <M> <S> is on the <PC> <PM> <PS> plane<sp>; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all_valid", "kind": "plane"},
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [2], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type":  "filter_valid", "kind": "object"},
+      {"input_states": [1, 3], "type": "whether_not_all", "kind": "object"}
+    ],
+    "constraints": [],
+    "quantifiers": ["not_all"],
+    "type": ["existence1"]
+  },
+  {
+    "text": [
+      "Is there any <Z> <C> <M> <S> on the <PC> <PM> <PS> plane<sp>?",
+      "Some <Z> <C> <M> <S> is on the <PC> <PM> <PS> plane<sp>; is it right?",
+      "It is not the case that all the <Z> <C> <M> <S>s are not on the <PC> <PM> <PS> plane<sp>; is it right?",
+      "It is not the case that no <Z> <C> <M> <S> is on the <PC> <PM> <PS> plane<sp>; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all_valid", "kind": "plane"},
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [2], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type":  "filter_valid", "kind": "object"},
+      {"input_states": [1, 3], "type": "whether_some", "kind": "object"}
+    ],
+    "constraints": [],
+    "quantifiers": ["some"],
+    "type": ["existence1"]
+  },
+  {
+    "text": [
+      "There is no <Z> <C> <M> <S> on the <PC> <PM> <PS> plane<sp>; is it right?",
+      "No <Z> <C> <M> <S> is on the <PC> <PM> <PS> plane<sp>; is it right?",
+      "It's not the case that some <Z> <C> <M> <S> is on the <PC> <PM> <PS> plane<sp>; is it right?",
+      "All the <Z> <C> <M> <S>s are not on the <PC> <PM> <PS> plane<sp>; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all_valid", "kind": "plane"},
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [2], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type":  "filter_valid", "kind": "object"},
+      {"input_states": [1, 3], "type": "whether_no", "kind": "object"}
+    ],
+    "constraints": [],
+    "quantifiers": ["no"],
+    "type": ["existence1"]
+  },
+  {
+    "text": [
+      "Some but not all of the <Z> <C> <M> <S>s are on the <PC> <PM> <PS> plane<sp>; is it right?",
+      "Whether some but not all of the <Z> <C> <M> <S>s are on the <PC> <PM> <PS> plane<sp>?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all_valid", "kind": "plane"},
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [2], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type":  "filter_multiple_valid", "kind": "object"},
+      {"input_states": [1, 3], "type": "whether_some_but_not_all", "kind": "object"}
+    ],
+    "constraints": [],
+    "quantifiers": ["some_but_not_all"],
+    "type": ["existence1"]
+  },
+  {
+    "text": [
+      "<sa> there at most <OC> <Z> <C> <M> <S><so> on the <PC> <PM> <PS> plane<sp>?",
+      "It is not the case that more than <OC> <Z> <C> <M> <S><so> <sa> on the <PC> <PM> <PS> plane<sp>; is it right?",
+      "All the <Z> <C> <M> <S>s but at most <OC> are not on the <PC> <PM> <PS> plane<sp>; is it right?",
+      "At most <OC> <Z> <C> <M> <S><so> <sa> on the <PC> <PM> <PS> plane<sp>; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type":  "filter", "kind": "object"},
+      {"input_states": [1, 2], "value_inputs": ["<OC>", "<sa>", "<so>"], "type": "whether_at_most_number", "kind": "object"}
+    ],
+    "constraints": [],
+    "quantifiers": ["at_most_number"],
+    "type": ["existence1"]
+  },
+  {
+    "text": [
+      "<sa> there at least <OC> <Z> <C> <M> <S><so> on the <PC> <PM> <PS> plane<sp>?",
+      "It is not the case that fewer than <OC> <Z> <C> <M> <S><so> <sa> on the <PC> <PM> <PS> plane<sp>; is it right?",
+      "All the <Z> <C> <M> <S>s but at least <OC> are not on the <PC> <PM> <PS> plane<sp>; is it right?",
+      "At least <OC> <Z> <C> <M> <S><so> <sa> on the <PC> <PM> <PS> plane<sp>; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type":  "filter", "kind": "object"},
+      {"input_states": [1, 2], "value_inputs": ["<OC>", "<sa>", "<so>"], "type": "whether_at_least_number", "kind": "object"}
+    ],
+    "constraints": [],
+    "quantifiers": ["at_least_number"],
+    "type": ["existence1"]
+  },
+  {
+    "text": [
+      "<sa> there more than <OC> <Z> <C> <M> <S><so> on the <PC> <PM> <PS> plane<sp>?",
+      "It is not the case that at most <OC> <Z> <C> <M> <S><so> <sa> on the <PC> <PM> <PS> plane<sp>; is it right?",
+      "It is not the case that all the <Z> <C> <M> <S>s but at most <OC> are not on the <PC> <PM> <PS> plane<sp>; is it right?",
+      "More than <OC> <Z> <C> <M> <S><so> <sa> on the <PC> <PM> <PS> plane<sp>; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type":  "filter", "kind": "object"},
+      {"input_states": [1, 2], "value_inputs": ["<OC>", "<sa>", "<so>"], "type": "whether_more_than_number", "kind": "object"}
+    ],
+    "constraints": [],
+    "quantifiers": ["more_than_number"],
+    "type": ["existence1"]
+  },
+  {
+    "text": [
+      "<sa> there fewer than <OC> <Z> <C> <M> <S><so> on the <PC> <PM> <PS> plane<sp>?",
+      "It is not the case that at least <OC> <Z> <C> <M> <S><so> <sa> on the <PC> <PM> <PS> plane<sp>; is it right?",
+      "It is not the case that all the <Z> <C> <M> <S>s but at least <OC> are not on the <PC> <PM> <PS> plane<sp>; is it right?",
+      "Fewer than <OC> <Z> <C> <M> <S><so> <sa> on the <PC> <PM> <PS> plane<sp>; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type":  "filter", "kind": "object"},
+      {"input_states": [1, 2], "value_inputs": ["<OC>", "<sa>", "<so>"], "type": "whether_fewer_than_number", "kind": "object"}
+    ],
+    "constraints": [],
+    "quantifiers": ["fewer_than_number"],
+    "type": ["existence1"]
+  },
+  {
+    "text": [
+      "<sa> there exactly <OC> <Z> <C> <M> <S><so> on the <PC> <PM> <PS> plane<sp>?",
+      "There <sa> exactly <OC> <Z> <C> <M> <S><so> on the <PC> <PM> <PS> plane<sp>; is it right?",
+      "All the <Z> <C> <M> <S>s but <OC> are not on the <PC> <PM> <PS> plane<sp>; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type":  "filter", "kind": "object"},
+      {"input_states": [1, 2], "value_inputs": ["<OC>", "<sa>", "<so>"], "type": "whether_exact", "kind": "object"}
+    ],
+    "constraints": [],
+    "quantifiers": ["exactly_number"],
+    "type": ["existence1"]
+  },
+  {
+    "text": [
+      "<sa> there between <OC> and <OC2> <Z> <C> <M> <S><so> on the <PC> <PM> <PS> plane<sp>?",
+      "There <sa> between <OC> and <OC2> <Z> <C> <M> <S><so> on the <PC> <PM> <PS> plane<sp>; is it right?",
+      "<sa> there <OC> to <OC2> <Z> <C> <M> <S><so> on the <PC> <PM> <PS> plane<sp>?",
+      "There <sa> at least <OC> and at most <OC2> <Z> <C> <M> <S><so> on the <PC> <PM> <PS> plane<sp>; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type":  "filter_multiple", "kind": "object"},
+      {"input_states": [1, 2], "value_inputs": ["<OC>", "<OC2>", "<so>", "<sa>"], "type": "whether_between", "kind": "object"}
+    ],
+    "constraints": [],
+    "quantifiers": ["between"],
+    "type": ["existence1"]
+  },
+  {
+    "text": [
+      "Are all the <Z> <C> <M> <S>s but at most <OC> on the <PC> <PM> <PS> plane<sp>?",
+      "It is not the case that more than <OC> <Z> <C> <M> <S><so> <sa> not on the <PC> <PM> <PS> plane<sp>; is it right?",
+      "All the <Z> <C> <M> <S>s but at most <OC> are on the <PC> <PM> <PS> plane<sp>; is it right?",
+      "At most <OC> <Z> <C> <M> <S><so> <sa> not on the <PC> <PM> <PS> plane<sp>; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all_valid", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type":  "filter_multiple", "kind": "object"},
+      {"input_states": [1, 2], "value_inputs": ["<OC>", "<sa>", "<so>"], "type": "whether_but_most", "kind": "object"}
+    ],
+    "constraints": [],
+    "quantifiers": ["all_but_at_most"],
+    "type": ["existence1"]
+  },
+  {
+    "text": [
+      "Are all the <Z> <C> <M> <S>s but at least <OC> on the <PC> <PM> <PS> plane<sp>?",
+      "It is not the case that fewer than <OC> <Z> <C> <M> <S><so> <sa> not on the <PC> <PM> <PS> plane<sp>; is it right?",
+      "All the <Z> <C> <M> <S>s but at least <OC> are on the <PC> <PM> <PS> plane<sp>; is it right?",
+      "At least <OC> <Z> <C> <M> <S><so> <sa> not on the <PC> <PM> <PS> plane<sp>; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all_valid", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type":  "filter_multiple", "kind": "object"},
+      {"input_states": [1, 2], "value_inputs": ["<OC>", "<sa>", "<so>"], "type": "whether_but_least", "kind": "object"}
+    ],
+    "constraints": [],
+    "quantifiers": ["all_but_at_least"],
+    "type": ["existence1"]
+  },
+  {
+    "text": [
+      "Are most <Z> <C> <M> <S>s on the <PC> <PM> <PS> plane<sp>?",
+      "Are most of the <Z> <C> <M> <S>s on the <PC> <PM> <PS> plane<sp>?",
+      "Most <Z> <C> <M> <S>s are on the <PC> <PM> <PS> plane<sp>; is it right?",
+      "Most of the <Z> <C> <M> <S>s are on the <PC> <PM> <PS> plane<sp>; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all_valid", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type":  "filter_multiple", "kind": "object"},
+      {"input_states": [1, 2], "type": "whether_most", "kind": "object"}
+    ],
+    "constraints": [],
+    "quantifiers": ["most"],
+    "type": ["existence1"]
+  },
+  {
+    "text": [
+      "Are more than <OP> of the <Z> <C> <M> <S>s on the <PC> <PM> <PS> plane<sp>?",
+      "More than <OP> of the <Z> <C> <M> <S>s are on the <PC> <PM> <PS> plane<sp>; is it right?",
+      "It is not the case that at most <OP> of the <Z> <C> <M> <S>s are on the <PC> <PM> <PS> plane<sp>; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all_valid", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type":  "filter_multiple", "kind": "object"},
+      {"input_states": [1, 2], "value_inputs": ["<OP>"], "type": "whether_more_than_fractions", "kind": "object"}
+    ],
+    "constraints": [],
+    "quantifiers": ["more_than_fractions"],
+    "type": ["existence1"]
+  },
+  {
+    "text": [
+      "Are fewer than <OP> of the <Z> <C> <M> <S>s on the <PC> <PM> <PS> plane<sp>?",
+      "Fewer than <OP> of the <Z> <C> <M> <S>s are on the <PC> <PM> <PS> plane<sp>; is it right?",
+      "It is not the case that at least <OP> of the <Z> <C> <M> <S>s are on the <PC> <PM> <PS> plane<sp>; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all_valid", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type":  "filter_multiple", "kind": "object"},
+      {"input_states": [1, 2], "value_inputs": ["<OP>"], "type": "whether_fewer_than_fractions", "kind": "object"}
+    ],
+    "constraints": [],
+    "quantifiers": ["fewer_than_fractions"],
+    "type": ["existence1"]
+  },
+  {
+    "text": [
+      "Are at least <OP> of the <Z> <C> <M> <S>s on the <PC> <PM> <PS> plane<sp>?",
+      "At least <OP> of the <Z> <C> <M> <S>s are on the <PC> <PM> <PS> plane<sp>; is it right?",
+      "It is not the case that fewer than <OP> of the <Z> <C> <M> <S>s are on the <PC> <PM> <PS> plane<sp>; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all_valid", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type":  "filter_multiple", "kind": "object"},
+      {"input_states": [1, 2], "value_inputs": ["<OP>"], "type": "whether_at_least_fractions", "kind": "object"}
+    ],
+    "constraints": [],
+    "quantifiers": ["at_least_fractions"],
+    "type": ["existence1"]
+  },
+  {
+    "text": [
+      "Are at most <OP> of the <Z> <C> <M> <S>s on the <PC> <PM> <PS> plane<sp>?",
+      "At most <OP> of the <Z> <C> <M> <S>s are on the <PC> <PM> <PS> plane<sp>; is it right?",
+      "It is not the case that more than <OP> of the <Z> <C> <M> <S>s are on the <PC> <PM> <PS> plane<sp>; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all_valid", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type":  "filter_multiple", "kind": "object"},
+      {"input_states": [1, 2], "value_inputs": ["<OP>"], "type": "whether_at_most_fractions", "kind": "object"}
+    ],
+    "constraints": [],
+    "quantifiers": ["at_most_fractions"],
+    "type": ["existence1"]
+  },
+  [
+    {
+      "text": [
+        "On the <PC> <PM> <PS> plane<sp>, is there any <Z2> <C2> <M2> <S2> that has the same size as most <Z> <C> <M> <S>s?",
+        "On the <PC> <PM> <PS> plane<sp>, there is some <Z2> <C2> <M2> <S2> that has the same size as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, it is not the case that all the <Z2> <C2> <M2> <S2>s are not the same size as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, it is not the case that no <Z2> <C2> <M2> <S2> is the same size as most <Z> <C> <M> <S>s; is it right?"
+      ],
+      "nodes": [
+        {"input_states": [], "type": "scene", "kind": "scene"},
+        {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+        {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["<Z2>", "<C2>", "<M2>", "<S2>"], "type": "filter_valid", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["Z"], "type": "query_attribute_most", "kind": "object"},
+        {"input_states": [4, 3], "type": "exist_some", "kind": "object"}
+      ],
+      "constraints": [
+        {"params": ["<Z>", "<Z2>"], "type": "NULL"},
+        {"params": [2, 3], "type": "NOT_CONTAIN"}
+      ],
+      "quantifiers": ["some", "most"],
+      "type": ["compare_attr_size"]
+    },
+    {
+      "text": [
+        "On the <PC> <PM> <PS> plane<sp>, is there any <Z2> <C2> <M2> <S2> that has the same color as most <Z> <C> <M> <S>s?",
+        "On the <PC> <PM> <PS> plane<sp>, there is some <Z2> <C2> <M2> <S2> that has the same color as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, it is not the case that all the <Z2> <C2> <M2> <S2>s are not the same color as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, It is not the case that no <Z2> <C2> <M2> <S2> is the same color as most <Z> <C> <M> <S>s; is it right?"
+      ],
+      "nodes": [
+        {"input_states": [], "type": "scene", "kind": "scene"},
+        {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+        {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["<Z2>", "<C2>", "<M2>", "<S2>"], "type": "filter_valid", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["C"], "type": "query_attribute_most", "kind": "object"},
+        {"input_states": [4, 3], "type": "exist_some", "kind": "object"}
+      ],
+      "constraints": [
+        {"params": ["<C>", "<C2>"], "type": "NULL"},
+        {"params": [2, 3], "type": "NOT_CONTAIN"}
+      ],
+      "quantifiers": ["some", "most"],
+      "type": ["compare_attr_color"]
+    },
+    {
+      "text": [
+        "On the <PC> <PM> <PS> plane<sp>, is there any <Z2> <C2> <M2> <S2> that has the same material as most <Z> <C> <M> <S>s?",
+        "On the <PC> <PM> <PS> plane<sp>, there is some <Z2> <C2> <M2> <S2> that has the same material as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, it is not the case that all the <Z2> <C2> <M2> <S2>s are not the same material as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, It is not the case that no <Z2> <C2> <M2> <S2> is the same material as most <Z> <C> <M> <S>s; is it right?"
+      ],
+      "nodes": [
+        {"input_states": [], "type": "scene", "kind": "scene"},
+        {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+        {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["<Z2>", "<C2>", "<M2>", "<S2>"], "type": "filter_valid", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["M"], "type": "query_attribute_most", "kind": "object"},
+        {"input_states": [4, 3], "type": "exist_some", "kind": "object"}
+      ],
+      "constraints": [
+        {"params": ["<M>", "<M2>"], "type": "NULL"},
+        {"params": [2, 3], "type": "NOT_CONTAIN"}
+      ],
+      "quantifiers": ["some", "most"],
+      "type": ["compare_attr_material"]
+    },
+    {
+      "text": [
+        "On the <PC> <PM> <PS> plane<sp>, is there any <Z2> <C2> <M2> <S2> that has the same shape as most <Z> <C> <M> <S>s?",
+        "On the <PC> <PM> <PS> plane<sp>, there is some <Z2> <C2> <M2> <S2> that has the same shape as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, it is not the case that all the <Z2> <C2> <M2> <S2>s are not the same shape as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, It is not the case that no <Z2> <C2> <M2> <S2> is the same shape as most <Z> <C> <M> <S>s; is it right?"
+      ],
+      "nodes": [
+        {"input_states": [], "type": "scene", "kind": "scene"},
+        {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+        {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["<Z2>", "<C2>", "<M2>", "<S2>"], "type": "filter_valid", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["S"], "type": "query_attribute_most", "kind": "object"},
+        {"input_states": [4, 3], "type": "exist_some", "kind": "object"}
+      ],
+      "constraints": [
+        {"params": ["<S>", "<S2>"], "type": "NULL"},
+        {"params": [2, 3], "type": "NOT_CONTAIN"}
+      ],
+      "quantifiers": ["some", "most"],
+      "type": ["compare_attr_shape"]
+    }
+  ],
+  [
+    {
+      "text": [
+        "On the <PC> <PM> <PS> plane<sp>, <sa> there exactly <OC> <Z2> <C2> <M2> <S2><so> that <sh> the same size as most <Z> <C> <M> <S>s?",
+        "On the <PC> <PM> <PS> plane<sp>, there <sa> exactly <OC> <Z2> <C2> <M2> <S2><so> that <sh> the same size as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, all the <Z2> <C2> <M2> <S2>s but <OC> are not the same size as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, are all the <Z2> <C2> <M2> <S2>s but <OC> not the same size as most <Z> <C> <M> <S>s?"
+      ],
+      "nodes": [
+        {"input_states": [], "type": "scene", "kind": "scene"},
+        {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+        {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["<Z2>", "<C2>", "<M2>", "<S2>"], "type": "filter", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["Z"], "type": "query_attribute_most", "kind": "object"},
+        {"input_states": [4, 3], "value_inputs": ["<OC>", "<sa>", "<so>", "<sh>"], "type": "exist_exact", "kind": "object"}
+      ],
+      "constraints": [
+        {"params": ["<Z>", "<Z2>"], "type": "NULL"}
+      ],
+      "quantifiers": ["exactly_number", "most"],
+      "type": ["compare_attr_size"]
+    },
+    {
+      "text": [
+        "On the <PC> <PM> <PS> plane<sp>, <sa> there exactly <OC> <Z2> <C2> <M2> <S2><so> that <sh> the same color as most <Z> <C> <M> <S>s?",
+        "On the <PC> <PM> <PS> plane<sp>, there <sa> exactly <OC> <Z2> <C2> <M2> <S2><so> that <sh> the same color as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, all the <Z2> <C2> <M2> <S2>s but <OC> are not the same color as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, are all the <Z2> <C2> <M2> <S2>s but <OC> not the same color as most <Z> <C> <M> <S>s?"
+      ],
+      "nodes": [
+        {"input_states": [], "type": "scene", "kind": "scene"},
+        {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+        {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["<Z2>", "<C2>", "<M2>", "<S2>"], "type": "filter", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["C"], "type": "query_attribute_most", "kind": "object"},
+        {"input_states": [4, 3], "value_inputs": ["<OC>", "<sa>", "<so>", "<sh>"], "type": "exist_exact", "kind": "object"}
+      ],
+      "constraints": [
+        {"params": ["<C>", "<C2>"], "type": "NULL"}
+      ],
+      "quantifiers": ["exactly_number", "most"],
+      "type": ["compare_attr_color"]
+    },
+    {
+      "text": [
+        "On the <PC> <PM> <PS> plane<sp>, <sa> there exactly <OC> <Z2> <C2> <M2> <S2><so> that <sh> the same material as most <Z> <C> <M> <S>s?",
+        "On the <PC> <PM> <PS> plane<sp>, there <sa> exactly <OC> <Z2> <C2> <M2> <S2><so> that <sh> the same material as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, all the <Z2> <C2> <M2> <S2>s but <OC> are not the same material as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, are all the <Z2> <C2> <M2> <S2>s but <OC> not the same material as most <Z> <C> <M> <S>s?"
+      ],
+      "nodes": [
+        {"input_states": [], "type": "scene", "kind": "scene"},
+        {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+        {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["<Z2>", "<C2>", "<M2>", "<S2>"], "type": "filter", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["M"], "type": "query_attribute_most", "kind": "object"},
+        {"input_states": [4, 3], "value_inputs": ["<OC>", "<sa>", "<so>", "<sh>"], "type": "exist_exact", "kind": "object"}
+      ],
+      "constraints": [
+        {"params": ["<M>", "<M2>"], "type": "NULL"}
+      ],
+      "quantifiers": ["exactly_number", "most"],
+      "type": ["compare_attr_material"]
+    },
+    {
+      "text": [
+        "On the <PC> <PM> <PS> plane<sp>, <sa> there exactly <OC> <Z2> <C2> <M2> <S2><so> that <sh> the same shape as most <Z> <C> <M> <S>s?",
+        "On the <PC> <PM> <PS> plane<sp>, there <sa> exactly <OC> <Z2> <C2> <M2> <S2><so> that <sh> the same shape as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, all the <Z2> <C2> <M2> <S2>s but <OC> are not the same shape as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, are all the <Z2> <C2> <M2> <S2>s but <OC> not the same shape as most <Z> <C> <M> <S>s?"
+      ],
+      "nodes": [
+        {"input_states": [], "type": "scene", "kind": "scene"},
+        {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+        {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["<Z2>", "<C2>", "<M2>", "<S2>"], "type": "filter", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["S"], "type": "query_attribute_most", "kind": "object"},
+        {"input_states": [4, 3], "value_inputs": ["<OC>", "<sa>", "<so>", "<sh>"], "type": "exist_exact", "kind": "object"}
+      ],
+      "constraints": [
+        {"params": ["<S>", "<S2>"], "type": "NULL"}
+      ],
+      "quantifiers": ["exactly_number", "most"],
+      "type": ["compare_attr_shape"]
+    }
+  ],
+  [
+    {
+      "text": [
+        "On the <PC> <PM> <PS> plane<sp>, <sa> there between <OC> and <OC2> <Z2> <C2> <M2> <S2><so> that <sh> the same size as most <Z> <C> <M> <S>s?",
+        "On the <PC> <PM> <PS> plane<sp>, between <OC> and <OC2> <Z2> <C2> <M2> <S2><so> <sa> the same size as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, <sa> there <OC> to <OC2> <Z2> <C2> <M2> <S2><so> that <sh> the same size as most <Z> <C> <M> <S>s?",
+        "On the <PC> <PM> <PS> plane<sp>, at least <OC> and at most <OC2> <Z2> <C2> <M2> <S2><so> <sa> the same size as most <Z> <C> <M> <S>s; is it right?"
+      ],
+      "nodes": [
+        {"input_states": [], "type": "scene", "kind": "scene"},
+        {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+        {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["<Z2>", "<C2>", "<M2>", "<S2>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["Z"], "type": "query_attribute_most", "kind": "object"},
+        {"input_states": [4, 3], "value_inputs": ["<OC>", "<OC2>", "<sa>", "<so>", "<sh>"], "type": "exist_between", "kind": "object"}
+      ],
+      "constraints": [
+        {"params": ["<Z>", "<Z2>"], "type": "NULL"}
+      ],
+      "quantifiers": ["between", "most"],
+      "type": ["compare_attr_size"]
+    },
+    {
+      "text": [
+        "On the <PC> <PM> <PS> plane<sp>, <sa> there between <OC> and <OC2> <Z2> <C2> <M2> <S2><so> that <sh> the same color as most <Z> <C> <M> <S>s?",
+        "On the <PC> <PM> <PS> plane<sp>, between <OC> and <OC2> <Z2> <C2> <M2> <S2><so> <sa> the same color as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, <sa> there <OC> to <OC2> <Z2> <C2> <M2> <S2><so> that <sh> the same color as most <Z> <C> <M> <S>s?",
+        "On the <PC> <PM> <PS> plane<sp>, at least <OC> and at most <OC2> <Z2> <C2> <M2> <S2><so> <sa> the same color as most <Z> <C> <M> <S>s; is it right?"
+      ],
+      "nodes": [
+        {"input_states": [], "type": "scene", "kind": "scene"},
+        {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+        {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["<Z2>", "<C2>", "<M2>", "<S2>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["C"], "type": "query_attribute_most", "kind": "object"},
+        {"input_states": [4, 3], "value_inputs": ["<OC>", "<OC2>", "<sa>", "<so>", "<sh>"], "type": "exist_between", "kind": "object"}
+      ],
+      "constraints": [
+        {"params": ["<C>", "<C2>"], "type": "NULL"}
+      ],
+      "quantifiers": ["between", "most"],
+      "type": ["compare_attr_color"]
+    },
+    {
+      "text": [
+        "On the <PC> <PM> <PS> plane<sp>, <sa> there between <OC> and <OC2> <Z2> <C2> <M2> <S2><so> that <sh> the same material as most <Z> <C> <M> <S>s?",
+        "On the <PC> <PM> <PS> plane<sp>, between <OC> and <OC2> <Z2> <C2> <M2> <S2><so> <sa> the same material as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, <sa> there <OC> to <OC2> <Z2> <C2> <M2> <S2><so> that <sh> the same material as most <Z> <C> <M> <S>s?",
+        "On the <PC> <PM> <PS> plane<sp>, at least <OC> and at most <OC2> <Z2> <C2> <M2> <S2><so> <sa> the same material as most <Z> <C> <M> <S>s; is it right?"
+      ],
+      "nodes": [
+        {"input_states": [], "type": "scene", "kind": "scene"},
+        {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+        {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["<Z2>", "<C2>", "<M2>", "<S2>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["M"], "type": "query_attribute_most", "kind": "object"},
+        {"input_states": [4, 3], "value_inputs": ["<OC>", "<OC2>", "<sa>", "<so>", "<sh>"], "type": "exist_between", "kind": "object"}
+      ],
+      "constraints": [
+        {"params": ["<M>", "<M2>"], "type": "NULL"}
+      ],
+      "quantifiers": ["between", "most"],
+      "type": ["compare_attr_material"]
+    },
+    {
+      "text": [
+        "On the <PC> <PM> <PS> plane<sp>, <sa> there between <OC> and <OC2> <Z2> <C2> <M2> <S2><so> that <sh> the same shape as most <Z> <C> <M> <S>s?",
+        "On the <PC> <PM> <PS> plane<sp>, between <OC> and <OC2> <Z2> <C2> <M2> <S2><so> <sa> the same shape as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, <sa> there <OC> to <OC2> <Z2> <C2> <M2> <S2><so> that <sh> the same shape as most <Z> <C> <M> <S>s?",
+        "On the <PC> <PM> <PS> plane<sp>, at least <OC> and at most <OC2> <Z2> <C2> <M2> <S2><so> <sa> the same shape as most <Z> <C> <M> <S>s; is it right?"
+      ],
+      "nodes": [
+        {"input_states": [], "type": "scene", "kind": "scene"},
+        {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+        {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["<Z2>", "<C2>", "<M2>", "<S2>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["S"], "type": "query_attribute_most", "kind": "object"},
+        {"input_states": [4, 3], "value_inputs": ["<OC>", "<OC2>", "<sa>", "<so>", "<sh>"], "type": "exist_between", "kind": "object"}
+      ],
+      "constraints": [
+        {"params": ["<S>", "<S2>"], "type": "NULL"}
+      ],
+      "quantifiers": ["between", "most"],
+      "type": ["compare_attr_shape"]
+    }
+  ],
+  [
+    {
+      "text": [
+        "On the <PC> <PM> <PS> plane<sp>, are there more than <OP> of the <Z2> <C2> <M2> <S2>s that have the same size as most <Z> <C> <M> <S>s?",
+        "On the <PC> <PM> <PS> plane<sp>, more than <OP> of the <Z2> <C2> <M2> <S2>s are the same size as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, it is not the case that at most <OP> of the <Z2> <C2> <M2> <S2>s are the same size as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, it is not the case that at most <OP> of the <Z2> <C2> <M2> <S2>s have the same size as most <Z> <C> <M> <S>s; is it right?"
+      ],
+      "nodes": [
+        {"input_states": [], "type": "scene", "kind": "scene"},
+        {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+        {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["<Z2>", "<C2>", "<M2>", "<S2>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["Z"], "type": "query_attribute_most", "kind": "object"},
+        {"input_states": [4, 3], "value_inputs": ["<OP>"], "type": "exist_more_than", "kind": "object"}
+      ],
+      "constraints": [
+        {"params": ["<Z>", "<Z2>"], "type": "NULL"},
+        {"params": [2, 3], "type": "OUT_NEQ"}
+      ],
+      "quantifiers": ["more_than_fractions", "most"],
+      "type": ["compare_attr_size"]
+    },
+    {
+      "text": [
+        "On the <PC> <PM> <PS> plane<sp>, are there more than <OP> of the <Z2> <C2> <M2> <S2>s that have the same color as most <Z> <C> <M> <S>s?",
+        "On the <PC> <PM> <PS> plane<sp>, more than <OP> of the <Z2> <C2> <M2> <S2>s are the same color as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, it is not the case that at most <OP> of the <Z2> <C2> <M2> <S2>s are the same color as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, it is not the case that at most <OP> of the <Z2> <C2> <M2> <S2>s have the same color as most <Z> <C> <M> <S>s; is it right?"
+      ],
+      "nodes": [
+        {"input_states": [], "type": "scene", "kind": "scene"},
+        {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+        {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["<Z2>", "<C2>", "<M2>", "<S2>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["C"], "type": "query_attribute_most", "kind": "object"},
+        {"input_states": [4, 3], "value_inputs": ["<OP>"], "type": "exist_more_than", "kind": "object"}
+      ],
+      "constraints": [
+        {"params": ["<C>", "<C2>"], "type": "NULL"},
+        {"params": [2, 3], "type": "OUT_NEQ"}
+      ],
+      "quantifiers": ["more_than_fractions", "most"],
+      "type": ["compare_attr_color"]
+    },
+    {
+      "text": [
+        "On the <PC> <PM> <PS> plane<sp>, are there more than <OP> of the <Z2> <C2> <M2> <S2>s that have the same material as most <Z> <C> <M> <S>s?",
+        "On the <PC> <PM> <PS> plane<sp>, more than <OP> of the <Z2> <C2> <M2> <S2>s are the same material as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, it is not the case that at most <OP> of the <Z2> <C2> <M2> <S2>s are the same material as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, it is not the case that at most <OP> of the <Z2> <C2> <M2> <S2>s have the same material as most <Z> <C> <M> <S>s; is it right?"
+      ],
+      "nodes": [
+        {"input_states": [], "type": "scene", "kind": "scene"},
+        {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+        {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["<Z2>", "<C2>", "<M2>", "<S2>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["M"], "type": "query_attribute_most", "kind": "object"},
+        {"input_states": [4, 3], "value_inputs": ["<OP>"], "type": "exist_more_than", "kind": "object"}
+      ],
+      "constraints": [
+        {"params": ["<M>", "<M2>"], "type": "NULL"},
+        {"params": [2, 3], "type": "OUT_NEQ"}
+      ],
+      "quantifiers": ["more_than_fractions", "most"],
+      "type": ["compare_attr_material"]
+    },
+    {
+      "text": [
+        "On the <PC> <PM> <PS> plane<sp>, are there more than <OP> of the <Z2> <C2> <M2> <S2>s that have the same shape as most <Z> <C> <M> <S>s?",
+        "On the <PC> <PM> <PS> plane<sp>, more than <OP> of the <Z2> <C2> <M2> <S2>s are the same shape as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, it is not the case that at most <OP> of the <Z2> <C2> <M2> <S2>s are the same shape as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, it is not the case that at most <OP> of the <Z2> <C2> <M2> <S2>s have the same shape as most <Z> <C> <M> <S>s; is it right?"
+      ],
+      "nodes": [
+        {"input_states": [], "type": "scene", "kind": "scene"},
+        {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+        {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["<Z2>", "<C2>", "<M2>", "<S2>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["S"], "type": "query_attribute_most", "kind": "object"},
+        {"input_states": [4, 3], "value_inputs": ["<OP>"], "type": "exist_more_than", "kind": "object"}
+      ],
+      "constraints": [
+        {"params": ["<S>", "<S2>"], "type": "NULL"},
+        {"params": [2, 3], "type": "OUT_NEQ"}
+      ],
+      "quantifiers": ["more_than_fractions", "most"],
+      "type": ["compare_attr_shape"]
+    }
+  ],
+  [
+    {
+      "text": [
+        "On the <PC> <PM> <PS> plane<sp>, are there fewer than <OP> of the <Z2> <C2> <M2> <S2>s that have the same size as most <Z> <C> <M> <S>s?",
+        "On the <PC> <PM> <PS> plane<sp>, fewer than <OP> of the <Z2> <C2> <M2> <S2>s are the same size as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, it is not the case that at least <OP> of the <Z2> <C2> <M2> <S2>s are the same size as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, it is not the case that at least <OP> of the <Z2> <C2> <M2> <S2>s have the same size as most <Z> <C> <M> <S>s; is it right?"
+      ],
+      "nodes": [
+        {"input_states": [], "type": "scene", "kind": "scene"},
+        {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+        {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["<Z2>", "<C2>", "<M2>", "<S2>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["Z"], "type": "query_attribute_most", "kind": "object"},
+        {"input_states": [4, 3], "value_inputs": ["<OP>"], "type": "exist_fewer_than", "kind": "object"}
+      ],
+      "constraints": [
+        {"params": ["<Z>", "<Z2>"], "type": "NULL"},
+        {"params": [2, 3], "type": "OUT_NEQ"}
+      ],
+      "quantifiers": ["fewer_than_fractions", "most"],
+      "type": ["compare_attr_size"]
+    },
+    {
+      "text": [
+        "On the <PC> <PM> <PS> plane<sp>, are there fewer than <OP> of the <Z2> <C2> <M2> <S2>s that have the same color as most <Z> <C> <M> <S>s?",
+        "On the <PC> <PM> <PS> plane<sp>, fewer than <OP> of the <Z2> <C2> <M2> <S2>s are the same color as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, it is not the case that at least <OP> of the <Z2> <C2> <M2> <S2>s are the same color as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, it is not the case that at least <OP> of the <Z2> <C2> <M2> <S2>s have the same color as most <Z> <C> <M> <S>s; is it right?"
+      ],
+      "nodes": [
+        {"input_states": [], "type": "scene", "kind": "scene"},
+        {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+        {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["<Z2>", "<C2>", "<M2>", "<S2>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["C"], "type": "query_attribute_most", "kind": "object"},
+        {"input_states": [4, 3], "value_inputs": ["<OP>"], "type": "exist_fewer_than", "kind": "object"}
+      ],
+      "constraints": [
+        {"params": ["<C>", "<C2>"], "type": "NULL"},
+        {"params": [2, 3], "type": "OUT_NEQ"}
+      ],
+      "quantifiers": ["fewer_than_fractions", "most"],
+      "type": ["compare_attr_color"]
+    },
+    {
+      "text": [
+        "On the <PC> <PM> <PS> plane<sp>, are there fewer than <OP> of the <Z2> <C2> <M2> <S2>s that have the same material as most <Z> <C> <M> <S>s?",
+        "On the <PC> <PM> <PS> plane<sp>, fewer than <OP> of the <Z2> <C2> <M2> <S2>s are the same material as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, it is not the case that at least <OP> of the <Z2> <C2> <M2> <S2>s are the same material as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, it is not the case that at least <OP> of the <Z2> <C2> <M2> <S2>s have the same material as most <Z> <C> <M> <S>s; is it right?"
+      ],
+      "nodes": [
+        {"input_states": [], "type": "scene", "kind": "scene"},
+        {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+        {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["<Z2>", "<C2>", "<M2>", "<S2>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["M"], "type": "query_attribute_most", "kind": "object"},
+        {"input_states": [4, 3], "value_inputs": ["<OP>"], "type": "exist_fewer_than", "kind": "object"}
+      ],
+      "constraints": [
+        {"params": ["<M>", "<M2>"], "type": "NULL"},
+        {"params": [2, 3], "type": "OUT_NEQ"}
+      ],
+      "quantifiers": ["fewer_than_fractions", "most"],
+      "type": ["compare_attr_material"]
+    },
+    {
+      "text": [
+        "On the <PC> <PM> <PS> plane<sp>, are there fewer than <OP> of the <Z2> <C2> <M2> <S2>s that have the same shape as most <Z> <C> <M> <S>s?",
+        "On the <PC> <PM> <PS> plane<sp>, fewer than <OP> of the <Z2> <C2> <M2> <S2>s are the same shape as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, it is not the case that at least <OP> of the <Z2> <C2> <M2> <S2>s are the same shape as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, it is not the case that at least <OP> of the <Z2> <C2> <M2> <S2>s have the same shape as most <Z> <C> <M> <S>s; is it right?"
+      ],
+      "nodes": [
+        {"input_states": [], "type": "scene", "kind": "scene"},
+        {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+        {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["<Z2>", "<C2>", "<M2>", "<S2>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["S"], "type": "query_attribute_most", "kind": "object"},
+        {"input_states": [4, 3], "value_inputs": ["<OP>"], "type": "exist_fewer_than", "kind": "object"}
+      ],
+      "constraints": [
+        {"params": ["<S>", "<S2>"], "type": "NULL"},
+        {"params": [2, 3], "type": "OUT_NEQ"}
+      ],
+      "quantifiers": ["fewer_than_fractions", "most"],
+      "type": ["compare_attr_shape"]
+    }
+  ],
+  [
+    {
+      "text": [
+        "On the <PC> <PM> <PS> plane<sp>, are all the <Z2> <C2> <M2> <S2>s but at most <OC> the same size as most <Z> <C> <M> <S>s?",
+        "On the <PC> <PM> <PS> plane<sp>, all the <Z2> <C2> <M2> <S2>s but at most <OC> have the same size as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, at most <OC> <Z2> <C2> <M2> <S2><so> <sa> not the same size as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, it is not the case that more than <OC> <Z2> <C2> <M2> <S2><so> <sa> not the same size as most <Z> <C> <M> <S>s; is it right?"
+      ],
+      "nodes": [
+        {"input_states": [], "type": "scene", "kind": "scene"},
+        {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+        {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["<Z2>", "<C2>", "<M2>", "<S2>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["Z"], "type": "query_attribute_most", "kind": "object"},
+        {"input_states": [4, 3], "value_inputs": ["<OC>", "<sa>", "<so>", "<sh>"], "type": "exist_but_most", "kind": "object"}
+      ],
+      "constraints": [
+        {"params": ["<Z>", "<Z2>"], "type": "NULL"}
+      ],
+      "quantifiers": ["all_but_at_most", "most"],
+      "type": ["compare_attr_size"]
+    },
+    {
+      "text": [
+        "On the <PC> <PM> <PS> plane<sp>, are all the <Z2> <C2> <M2> <S2>s but at most <OC> the same color as most <Z> <C> <M> <S>s?",
+        "On the <PC> <PM> <PS> plane<sp>, all the <Z2> <C2> <M2> <S2>s but at most <OC> have the same color as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, at most <OC> <Z2> <C2> <M2> <S2><so> <sa> not the same color as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, it is not the case that more than <OC> <Z2> <C2> <M2> <S2><so> <sa> not the same color as most <Z> <C> <M> <S>s; is it right?"
+      ],
+      "nodes": [
+        {"input_states": [], "type": "scene", "kind": "scene"},
+        {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+        {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["<Z2>", "<C2>", "<M2>", "<S2>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["C"], "type": "query_attribute_most", "kind": "object"},
+        {"input_states": [4, 3], "value_inputs": ["<OC>", "<sa>", "<so>", "<sh>"], "type": "exist_but_most", "kind": "object"}
+      ],
+      "constraints": [
+        {"params": ["<C>", "<C2>"], "type": "NULL"}
+      ],
+      "quantifiers": ["all_but_at_most", "most"],
+      "type": ["compare_attr_color"]
+    },
+    {
+      "text": [
+        "On the <PC> <PM> <PS> plane<sp>, are all the <Z2> <C2> <M2> <S2>s but at most <OC> the same material as most <Z> <C> <M> <S>s?",
+        "On the <PC> <PM> <PS> plane<sp>, all the <Z2> <C2> <M2> <S2>s but at most <OC> have the same material as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, at most <OC> <Z2> <C2> <M2> <S2><so> <sa> not the same material as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, it is not the case that more than <OC> <Z2> <C2> <M2> <S2><so> <sa> not the same material as most <Z> <C> <M> <S>s; is it right?"
+      ],
+      "nodes": [
+        {"input_states": [], "type": "scene", "kind": "scene"},
+        {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+        {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["<Z2>", "<C2>", "<M2>", "<S2>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["M"], "type": "query_attribute_most", "kind": "object"},
+        {"input_states": [4, 3], "value_inputs": ["<OC>", "<sa>", "<so>", "<sh>"], "type": "exist_but_most", "kind": "object"}
+      ],
+      "constraints": [
+        {"params": ["<M>", "<M2>"], "type": "NULL"}
+      ],
+      "quantifiers": ["all_but_at_most", "most"],
+      "type": ["compare_attr_material"]
+    },
+    {
+      "text": [
+        "On the <PC> <PM> <PS> plane<sp>, are all the <Z2> <C2> <M2> <S2>s but at most <OC> the same shape as most <Z> <C> <M> <S>s?",
+        "On the <PC> <PM> <PS> plane<sp>, all the <Z2> <C2> <M2> <S2>s but at most <OC> have the same shape as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, at most <OC> <Z2> <C2> <M2> <S2><so> <sa> not the same shape as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, it is not the case that more than <OC> <Z2> <C2> <M2> <S2><so> <sa> not the same shape as most <Z> <C> <M> <S>s; is it right?"
+      ],
+      "nodes": [
+        {"input_states": [], "type": "scene", "kind": "scene"},
+        {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+        {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["<Z2>", "<C2>", "<M2>", "<S2>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["S"], "type": "query_attribute_most", "kind": "object"},
+        {"input_states": [4, 3], "value_inputs": ["<OC>", "<sa>", "<so>", "<sh>"], "type": "exist_but_most", "kind": "object"}
+      ],
+      "constraints": [
+        {"params": ["<S>", "<S2>"], "type": "NULL"}
+      ],
+      "quantifiers": ["all_but_at_most", "most"],
+      "type": ["compare_attr_shape"]
+    }
+  ],
+  [
+    {
+      "text": [
+        "On the <PC> <PM> <PS> plane<sp>, are all the <Z2> <C2> <M2> <S2>s but at least <OC> the same size as most <Z> <C> <M> <S>s?",
+        "On the <PC> <PM> <PS> plane<sp>, all the <Z2> <C2> <M2> <S2>s but at least <OC> have the same size as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, at least <OC> <Z2> <C2> <M2> <S2><so> <sa> not the same size as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, it is not the case that fewer than <OC> <Z2> <C2> <M2> <S2><so> <sa> not the same size as most <Z> <C> <M> <S>s; is it right?"
+      ],
+      "nodes": [
+        {"input_states": [], "type": "scene", "kind": "scene"},
+        {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+        {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["<Z2>", "<C2>", "<M2>", "<S2>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["Z"], "type": "query_attribute_most", "kind": "object"},
+        {"input_states": [4, 3], "value_inputs": ["<OC>", "<sa>", "<so>", "<sh>"], "type": "exist_but_least", "kind": "object"}
+      ],
+      "constraints": [
+        {"params": ["<Z>", "<Z2>"], "type": "NULL"}
+      ],
+      "quantifiers": ["all_but_at_least", "most"],
+      "type": ["compare_attr_size"]
+    },
+    {
+      "text": [
+        "On the <PC> <PM> <PS> plane<sp>, are all the <Z2> <C2> <M2> <S2>s but at least <OC> the same color as most <Z> <C> <M> <S>s?",
+        "On the <PC> <PM> <PS> plane<sp>, all the <Z2> <C2> <M2> <S2>s but at least <OC> have the same color as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, at least <OC> <Z2> <C2> <M2> <S2><so> <sa> not the same color as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, it is not the case that fewer than <OC> <Z2> <C2> <M2> <S2><so> <sa> not the same color as most <Z> <C> <M> <S>s; is it right?"
+      ],
+      "nodes": [
+        {"input_states": [], "type": "scene", "kind": "scene"},
+        {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+        {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["<Z2>", "<C2>", "<M2>", "<S2>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["C"], "type": "query_attribute_most", "kind": "object"},
+        {"input_states": [4, 3], "value_inputs": ["<OC>", "<sa>", "<so>", "<sh>"], "type": "exist_but_least", "kind": "object"}
+      ],
+      "constraints": [
+        {"params": ["<C>", "<C2>"], "type": "NULL"}
+      ],
+      "quantifiers": ["all_but_at_least", "most"],
+      "type": ["compare_attr_color"]
+    },
+    {
+      "text": [
+        "On the <PC> <PM> <PS> plane<sp>, are all the <Z2> <C2> <M2> <S2>s but at least <OC> the same material as most <Z> <C> <M> <S>s?",
+        "On the <PC> <PM> <PS> plane<sp>, all the <Z2> <C2> <M2> <S2>s but at least <OC> have the same material as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, at least <OC> <Z2> <C2> <M2> <S2><so> <sa> not the same material as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, it is not the case that fewer than <OC> <Z2> <C2> <M2> <S2><so> <sa> not the same material as most <Z> <C> <M> <S>s; is it right?"
+      ],
+      "nodes": [
+        {"input_states": [], "type": "scene", "kind": "scene"},
+        {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+        {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["<Z2>", "<C2>", "<M2>", "<S2>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["M"], "type": "query_attribute_most", "kind": "object"},
+        {"input_states": [4, 3], "value_inputs": ["<OC>", "<sa>", "<so>", "<sh>"], "type": "exist_but_least", "kind": "object"}
+      ],
+      "constraints": [
+        {"params": ["<M>", "<M2>"], "type": "NULL"}
+      ],
+      "quantifiers": ["all_but_at_least", "most"],
+      "type": ["compare_attr_material"]
+    },
+    {
+      "text": [
+        "On the <PC> <PM> <PS> plane<sp>, are all the <Z2> <C2> <M2> <S2>s but at least <OC> the same shape as most <Z> <C> <M> <S>s?",
+        "On the <PC> <PM> <PS> plane<sp>, all the <Z2> <C2> <M2> <S2>s but at least <OC> have the same shape as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, at least <OC> <Z2> <C2> <M2> <S2><so> <sa> not the same shape as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, it is not the case that fewer than <OC> <Z2> <C2> <M2> <S2><so> <sa> not the same shape as most <Z> <C> <M> <S>s; is it right?"
+      ],
+      "nodes": [
+        {"input_states": [], "type": "scene", "kind": "scene"},
+        {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+        {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["<Z2>", "<C2>", "<M2>", "<S2>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["S"], "type": "query_attribute_most", "kind": "object"},
+        {"input_states": [4, 3], "value_inputs": ["<OC>", "<sa>", "<so>", "<sh>"], "type": "exist_but_least", "kind": "object"}
+      ],
+      "constraints": [
+        {"params": ["<S>", "<S2>"], "type": "NULL"}
+      ],
+      "quantifiers": ["all_but_at_least", "most"],
+      "type": ["compare_attr_shape"]
+    }
+  ],
+  [
+    {
+      "text": [
+        "On the <PC> <PM> <PS> plane<sp>, <sa> there at most <OC> <Z2> <C2> <M2> <S2><so> that <sh> the same size as most <Z> <C> <M> <S>s?",
+        "On the <PC> <PM> <PS> plane<sp>, at most <OC> <Z2> <C2> <M2> <S2><so> <sh> the same size as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, it is not the case that more than <OC> <Z2> <C2> <M2> <S2><so> <sh> the same size as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, all the <Z2> <C2> <M2> <S2>s but at most <OC> are not the same size as most <Z> <C> <M> <S>s; is it right?"
+      ],
+      "nodes": [
+        {"input_states": [], "type": "scene", "kind": "scene"},
+        {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+        {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["<Z2>", "<C2>", "<M2>", "<S2>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["Z"], "type": "query_attribute_most", "kind": "object"},
+        {"input_states": [4, 3], "value_inputs": ["<OC>", "<sa>", "<so>", "<sh>"], "type": "exist_at_most", "kind": "object"}
+      ],
+      "constraints": [
+        {"params": ["<Z>", "<Z2>"], "type": "NULL"}
+      ],
+      "quantifiers": ["at_most_number", "most"],
+      "type": ["compare_attr_size"]
+    },
+    {
+      "text": [
+        "On the <PC> <PM> <PS> plane<sp>, <sa> there at most <OC> <Z2> <C2> <M2> <S2><so> that <sh> the same color as most <Z> <C> <M> <S>s?",
+        "On the <PC> <PM> <PS> plane<sp>, at most <OC> <Z2> <C2> <M2> <S2><so> <sh> the same color as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, it is not the case that more than <OC> <Z2> <C2> <M2> <S2><so> <sh> the same color as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, all the <Z2> <C2> <M2> <S2>s but at most <OC> are not the same color as most <Z> <C> <M> <S>s; is it right?"
+      ],
+      "nodes": [
+        {"input_states": [], "type": "scene", "kind": "scene"},
+        {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+        {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["<Z2>", "<C2>", "<M2>", "<S2>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["C"], "type": "query_attribute_most", "kind": "object"},
+        {"input_states": [4, 3], "value_inputs": ["<OC>", "<sa>", "<so>", "<sh>"], "type": "exist_at_most", "kind": "object"}
+      ],
+      "constraints": [
+        {"params": ["<C>", "<C2>"], "type": "NULL"}
+      ],
+      "quantifiers": ["at_most_number", "most"],
+      "type": ["compare_attr_color"]
+    },
+    {
+      "text": [
+        "On the <PC> <PM> <PS> plane<sp>, <sa> there at most <OC> <Z2> <C2> <M2> <S2><so> that <sh> the same material as most <Z> <C> <M> <S>s?",
+        "On the <PC> <PM> <PS> plane<sp>, at most <OC> <Z2> <C2> <M2> <S2><so> <sh> the same material as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, it is not the case that more than <OC> <Z2> <C2> <M2> <S2><so> <sh> the same material as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, all the <Z2> <C2> <M2> <S2>s but at most <OC> are not the same material as most <Z> <C> <M> <S>s; is it right?"
+      ],
+      "nodes": [
+        {"input_states": [], "type": "scene", "kind": "scene"},
+        {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+        {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["<Z2>", "<C2>", "<M2>", "<S2>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["M"], "type": "query_attribute_most", "kind": "object"},
+        {"input_states": [4, 3], "value_inputs": ["<OC>", "<sa>", "<so>", "<sh>"], "type": "exist_at_most", "kind": "object"}
+      ],
+      "constraints": [
+        {"params": ["<M>", "<M2>"], "type": "NULL"}
+      ],
+      "quantifiers": ["at_most_number", "most"],
+      "type": ["compare_attr_material"]
+    },
+    {
+      "text": [
+        "On the <PC> <PM> <PS> plane<sp>, <sa> there at most <OC> <Z2> <C2> <M2> <S2><so> that <sh> the same shape as most <Z> <C> <M> <S>s?",
+        "On the <PC> <PM> <PS> plane<sp>, at most <OC> <Z2> <C2> <M2> <S2><so> <sh> the same shape as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, it is not the case that more than <OC> <Z2> <C2> <M2> <S2><so> <sh> the same shape as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, all the <Z2> <C2> <M2> <S2>s but at most <OC> are not the same shape as most <Z> <C> <M> <S>s; is it right?"
+      ],
+      "nodes": [
+        {"input_states": [], "type": "scene", "kind": "scene"},
+        {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+        {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["<Z2>", "<C2>", "<M2>", "<S2>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["S"], "type": "query_attribute_most", "kind": "object"},
+        {"input_states": [4, 3], "value_inputs": ["<OC>", "<sa>", "<so>", "<sh>"], "type": "exist_at_most", "kind": "object"}
+      ],
+      "constraints": [
+        {"params": ["<S>", "<S2>"], "type": "NULL"}
+      ],
+      "quantifiers": ["at_most_number", "most"],
+      "type": ["compare_attr_shape"]
+    }
+  ],
+  [
+    {
+      "text": [
+        "On the <PC> <PM> <PS> plane<sp>, are there at least <OC> <Z2> <C2> <M2> <S2><so> that <sh> the same size as most <Z> <C> <M> <S>s?",
+        "On the <PC> <PM> <PS> plane<sp>, at least <OC> <Z2> <C2> <M2> <S2><so> <sh> the same size as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, it is not the case that fewer than <OC> <Z2> <C2> <M2> <S2><so> <sh> the same size as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, all the <Z2> <C2> <M2> <S2>s but at least <OC> are not the same size as most <Z> <C> <M> <S>s; is it right?"
+      ],
+      "nodes": [
+        {"input_states": [], "type": "scene", "kind": "scene"},
+        {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+        {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["<Z2>", "<C2>", "<M2>", "<S2>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["Z"], "type": "query_attribute_most", "kind": "object"},
+        {"input_states": [4, 3], "value_inputs": ["<OC>", "<sa>", "<so>", "<sh>"], "type": "exist_at_least", "kind": "object"}
+      ],
+      "constraints": [
+        {"params": ["<Z>", "<Z2>"], "type": "NULL"}
+      ],
+      "quantifiers": ["at_least_number", "most"],
+      "type": ["compare_attr_size"]
+    },
+    {
+      "text": [
+        "On the <PC> <PM> <PS> plane<sp>, are there at least <OC> <Z2> <C2> <M2> <S2><so> that <sh> the same color as most <Z> <C> <M> <S>s?",
+        "On the <PC> <PM> <PS> plane<sp>, at least <OC> <Z2> <C2> <M2> <S2><so> <sh> the same color as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, it is not the case that fewer than <OC> <Z2> <C2> <M2> <S2><so> <sh> the same color as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, all the <Z2> <C2> <M2> <S2>s but at least <OC> are not the same color as most <Z> <C> <M> <S>s; is it right?"
+      ],
+      "nodes": [
+        {"input_states": [], "type": "scene", "kind": "scene"},
+        {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+        {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["<Z2>", "<C2>", "<M2>", "<S2>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["C"], "type": "query_attribute_most", "kind": "object"},
+        {"input_states": [4, 3], "value_inputs": ["<OC>", "<sa>", "<so>", "<sh>"], "type": "exist_at_least", "kind": "object"}
+      ],
+      "constraints": [
+        {"params": ["<C>", "<C2>"], "type": "NULL"}
+      ],
+      "quantifiers": ["at_least_number", "most"],
+      "type": ["compare_attr_color"]
+    },
+    {
+      "text": [
+        "On the <PC> <PM> <PS> plane<sp>, are there at least <OC> <Z2> <C2> <M2> <S2><so> that <sh> the same material as most <Z> <C> <M> <S>s?",
+        "On the <PC> <PM> <PS> plane<sp>, at least <OC> <Z2> <C2> <M2> <S2><so> <sh> the same material as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, it is not the case that fewer than <OC> <Z2> <C2> <M2> <S2><so> <sh> the same material as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, all the <Z2> <C2> <M2> <S2>s but at least <OC> are not the same material as most <Z> <C> <M> <S>s; is it right?"
+      ],
+      "nodes": [
+        {"input_states": [], "type": "scene", "kind": "scene"},
+        {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+        {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["<Z2>", "<C2>", "<M2>", "<S2>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["M"], "type": "query_attribute_most", "kind": "object"},
+        {"input_states": [4, 3], "value_inputs": ["<OC>", "<sa>", "<so>", "<sh>"], "type": "exist_at_least", "kind": "object"}
+      ],
+      "constraints": [
+        {"params": ["<M>", "<M2>"], "type": "NULL"}
+      ],
+      "quantifiers": ["at_least_number", "most"],
+      "type": ["compare_attr_material"]
+    },
+    {
+      "text": [
+        "On the <PC> <PM> <PS> plane<sp>, <sa> there at least <OC> <Z2> <C2> <M2> <S2><so> that <sh> the same shape as most <Z> <C> <M> <S>s?",
+        "On the <PC> <PM> <PS> plane<sp>, at least <OC> <Z2> <C2> <M2> <S2><so> <sh> the same shape as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, it is not the case that fewer than <OC> <Z2> <C2> <M2> <S2><so> <sh> the same shape as most <Z> <C> <M> <S>s; is it right?",
+        "On the <PC> <PM> <PS> plane<sp>, all the <Z2> <C2> <M2> <S2>s but at least <OC> are not the same shape as most <Z> <C> <M> <S>s; is it right?"
+      ],
+      "nodes": [
+        {"input_states": [], "type": "scene", "kind": "scene"},
+        {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+        {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["<Z2>", "<C2>", "<M2>", "<S2>"], "type": "filter_multiple", "kind": "object"},
+        {"input_states": [2], "value_inputs": ["S"], "type": "query_attribute_most", "kind": "object"},
+        {"input_states": [4, 3], "value_inputs": ["<OC>", "<sa>", "<so>", "<sh>"], "type": "exist_at_least", "kind": "object"}
+      ],
+      "constraints": [
+        {"params": ["<S>", "<S2>"], "type": "NULL"}
+      ],
+      "quantifiers": ["at_least_number", "most"],
+      "type": ["compare_attr_shape"]
+    }
+  ],
+  {
+    "text": [
+      "On the <PC> <PM> <PS> plane<sp>, are there more <Z> <C> <M> <S>s than <Z2> <C2> <M2> <S2>s?",
+      "On the <PC> <PM> <PS> plane<sp>, is the number of <Z> <C> <M> <S>s greater than the number of <Z2> <C2> <M2> <S2>s?",
+      "On the <PC> <PM> <PS> plane<sp>, there are more <Z> <C> <M> <S>s than <Z2> <C2> <M2> <S2>s; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, the number of <Z> <C> <M> <S>s is greater than the number of <Z2> <C2> <M2> <S2>s; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_valid", "kind": "object"},
+      {"input_states": [2], "value_inputs": ["<Z2>", "<C2>", "<M2>", "<S2>"], "type": "filter_valid", "kind": "object"},
+      {"input_states": [2, 3], "type": "more_A_than_B", "kind": "object"}
+    ],
+    "constraints": [
+      {"params": [2, 3], "type": "NOT_CONTAIN"}
+    ],
+    "quantifiers": ["more_A_than_B"],
+    "type": ["compare_integer"]
+  },
+  {
+    "text": [
+      "On the <PC> <PM> <PS> plane<sp>, are there fewer <Z> <C> <M> <S>s than <Z2> <C2> <M2> <S2>s?",
+      "On the <PC> <PM> <PS> plane<sp>, is the number of <Z> <C> <M> <S>s less than the number of <Z2> <C2> <M2> <S2>s?",
+      "On the <PC> <PM> <PS> plane<sp>, there are fewer <Z> <C> <M> <S>s than <Z2> <C2> <M2> <S2>s; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, the number of <Z> <C> <M> <S>s is less than the number of <Z2> <C2> <M2> <S2>s; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_valid", "kind": "object"},
+      {"input_states": [2], "value_inputs": ["<Z2>", "<C2>", "<M2>", "<S2>"], "type": "filter_valid", "kind": "object"},
+      {"input_states": [2, 3], "type": "fewer_A_than_B", "kind": "object"}
+    ],
+    "constraints": [
+      {"params": [3, 2], "type": "NOT_CONTAIN"}
+    ],
+    "quantifiers": ["fewer_A_than_B"],
+    "type": ["compare_integer"]
+  },
+  {
+    "text": [
+      "On the <PC> <PM> <PS> plane<sp>, is there an equal number of <Z> <C> <M> <S>s and <Z2> <C2> <M2> <S2>s?",
+      "On the <PC> <PM> <PS> plane<sp>, is there the same number of <Z> <C> <M> <S>s and <Z2> <C2> <M2> <S2>s?",
+      "On the <PC> <PM> <PS> plane<sp>, is the number of <Z> <C> <M> <S>s the same as the number of <Z2> <C2> <M2> <S2>s?",
+      "On the <PC> <PM> <PS> plane<sp>, there is an equal number of <Z> <C> <M> <S>s and <Z2> <C2> <M2> <S2>s; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_valid", "kind": "object"},
+      {"input_states": [2], "value_inputs": ["<Z2>", "<C2>", "<M2>", "<S2>"], "type": "filter_valid", "kind": "object"},
+      {"input_states": [2, 3], "type": "equal_A_and_B", "kind": "object"}
+    ],
+    "constraints": [
+      {"params": [2, 3], "type": "OUT_NEQ"}
+    ],
+    "quantifiers": ["equal_A_and_B"],
+    "type": ["compare_integer"]
+  },
+  {
+    "text": [
+      "On the <PC> <PM> <PS> plane<sp>, are there more <Z2> <C2> <M2> <S2>s <OR> the <Z> <C> <M> <S> than <Z4> <C4> <M4> <S4>s <OR2> the <Z3> <C3> <M3> <S3>?",
+      "On the <PC> <PM> <PS> plane<sp>, is the number of <Z2> <C2> <M2> <S2>s <OR> the <Z> <C> <M> <S> greater than the number of <Z4> <C4> <M4> <S4>s <OR2> the <Z3> <C3> <M3> <S3>?",
+      "On the <PC> <PM> <PS> plane<sp>, there are more <Z2> <C2> <M2> <S2>s <OR> the <Z> <C> <M> <S> than <Z4> <C4> <M4> <S4>s <OR2> the <Z3> <C3> <M3> <S3>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, the number of <Z2> <C2> <M2> <S2>s <OR> the <Z> <C> <M> <S> is greater than the number of <Z4> <C4> <M4> <S4>s <OR2> the <Z3> <C3> <M3> <S3>; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_unique_valid", "kind": "object"},
+      {"input_states": [2], "value_inputs": ["<OR>", "<Z2>", "<C2>", "<M2>", "<S2>"], "type": "relate_filter", "kind": "object"},
+      {"input_states": [2], "value_inputs": ["<Z3>", "<C3>", "<M3>", "<S3>"], "type": "filter_unique_valid", "kind": "object"},
+      {"input_states": [2, 3, 4], "value_inputs": ["<OR2>", "<Z4>", "<C4>", "<M4>", "<S4>"], "type": "relate_filter", "kind": "object"},
+      {"input_states": [3, 5], "type": "more_A_than_B", "kind": "object"}
+    ],
+    "constraints": [
+      {"params": [2, 4], "type": "UNQ_EQ"},
+      {"params": [5, 3], "type": "R_NOT_CONTAIN"}
+    ],
+    "quantifiers": ["more_A_than_B"],
+    "type": ["compare_integer", "spatial_relationship"]
+  },
+  {
+    "text": [
+      "On the <PC> <PM> <PS> plane<sp>, are there fewer <Z2> <C2> <M2> <S2>s <OR> the <Z> <C> <M> <S> than <Z4> <C4> <M4> <S4>s <OR2> the <Z3> <C3> <M3> <S3>?",
+      "On the <PC> <PM> <PS> plane<sp>, is the number of <Z2> <C2> <M2> <S2>s <OR> the <Z> <C> <M> <S> less than the number of <Z4> <C4> <M4> <S4>s <OR2> the <Z3> <C3> <M3> <S3>?",
+      "On the <PC> <PM> <PS> plane<sp>, there are fewer <Z2> <C2> <M2> <S2>s <OR> the <Z> <C> <M> <S> than <Z4> <C4> <M4> <S4>s <OR2> the <Z3> <C3> <M3> <S3>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, the number of <Z2> <C2> <M2> <S2>s <OR> the <Z> <C> <M> <S> is less than the number of <Z4> <C4> <M4> <S4>s <OR2> the <Z3> <C3> <M3> <S3>; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_unique_valid", "kind": "object"},
+      {"input_states": [2], "value_inputs": ["<OR>", "<Z2>", "<C2>", "<M2>", "<S2>"], "type": "relate_filter", "kind": "object"},
+      {"input_states": [2], "value_inputs": ["<Z3>", "<C3>", "<M3>", "<S3>"], "type": "filter_unique_valid", "kind": "object"},
+      {"input_states": [2, 3, 4], "value_inputs": ["<OR2>", "<Z4>", "<C4>", "<M4>", "<S4>"], "type": "relate_filter", "kind": "object"},
+      {"input_states": [3, 5], "type": "fewer_A_than_B", "kind": "object"}
+    ],
+    "constraints": [
+      {"params": [2, 4], "type": "UNQ_EQ"},
+      {"params": [3, 5], "type": "R_NOT_CONTAIN"}
+    ],
+    "quantifiers": ["fewer_A_than_B"],
+    "type": ["compare_integer", "spatial_relationship"]
+  },
+  {
+    "text": [
+      "On the <PC> <PM> <PS> plane<sp>, is there an equal number of <Z2> <C2> <M2> <S2>s <OR> the <Z> <C> <M> <S> and <Z4> <C4> <M4> <S4>s <OR2> the <Z3> <C3> <M3> <S3>?",
+      "On the <PC> <PM> <PS> plane<sp>, is there the same number of <Z2> <C2> <M2> <S2>s <OR> the <Z> <C> <M> <S> and <Z4> <C4> <M4> <S4>s <OR2> the <Z3> <C3> <M3> <S3>?",
+      "On the <PC> <PM> <PS> plane<sp>, is the number of <Z2> <C2> <M2> <S2>s <OR> the <Z> <C> <M> <S> the same as the number of <Z4> <C4> <M4> <S4>s <OR2> the <Z3> <C3> <M3> <S3>?",
+      "On the <PC> <PM> <PS> plane<sp>, there is an equal number of <Z2> <C2> <M2> <S2>s <OR> the <Z> <C> <M> <S> and <Z4> <C4> <M4> <S4>s <OR2> the <Z3> <C3> <M3> <S3>; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_unique_valid", "kind": "object"},
+      {"input_states": [2], "value_inputs": ["<OR>", "<Z2>", "<C2>", "<M2>", "<S2>"], "type": "relate_filter", "kind": "object"},
+      {"input_states": [2], "value_inputs": ["<Z3>", "<C3>", "<M3>", "<S3>"], "type": "filter_unique_valid", "kind": "object"},
+      {"input_states": [2, 3, 4], "value_inputs": ["<OR2>", "<Z4>", "<C4>", "<M4>", "<S4>"], "type": "relate_filter", "kind": "object"},
+      {"input_states": [3, 5], "type": "equal_A_and_B", "kind": "object"}
+    ],
+    "constraints": [
+      {"params": [2, 4], "type": "UNQ_EQ"},
+      {"params": [3, 5], "type": "R_OUT_NEQ"}
+    ],
+    "quantifiers": ["equal_A_and_B"],
+    "type": ["compare_integer", "spatial_relationship"]
+  },
+  {
+    "text": [
+      "On the <PC> <PM> <PS> plane<sp>, are all the <Z2> <C2> <M2> <S2>s <OR> the <Z> <C> <M> <S>?",
+      "On the <PC> <PM> <PS> plane<sp>, all the <Z2> <C2> <M2> <S2>s are <OR> the <Z> <C> <M> <S>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, it is not the case that some <Z2> <C2> <M2> <S2> is not <OR> the <Z> <C> <M> <S>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, no <Z2> <C2> <M2> <S2> is not <OR> the <Z> <C> <M> <S>; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_unique_valid", "kind": "object"},
+      {"input_states": [2], "value_inputs": ["<OR>", "<Z2>", "<C2>", "<M2>", "<S2>"], "type":  "relate_filter_valid_unlimited", "kind": "object"},
+      {"input_states": [3], "type": "all_relate", "kind": "object"}
+    ],
+    "constraints": [],
+    "quantifiers": ["all"],
+    "type": ["existence2", "spatial_relationship"]
+  },
+  {
+    "text": [
+      "On the <PC> <PM> <PS> plane<sp>, it is not the case that all the <Z2> <C2> <M2> <S2>s are <OR> the <Z> <C> <M> <S>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, it is not the case that no <Z2> <C2> <M2> <S2> is not <OR> the <Z> <C> <M> <S>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, some <Z2> <C2> <M2> <S2> is not <OR> the <Z> <C> <M> <S>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, there is some <Z2> <C2> <M2> <S2> not <OR> the <Z> <C> <M> <S>; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_unique_valid", "kind": "object"},
+      {"input_states": [2], "value_inputs": ["<OR>", "<Z2>", "<C2>", "<M2>", "<S2>"], "type":  "relate_filter_valid_unlimited", "kind": "object"},
+      {"input_states": [3], "type": "not_all_relate", "kind": "object"}
+    ],
+    "constraints": [],
+    "quantifiers": ["not_all"],
+    "type": ["existence2", "spatial_relationship"]
+  },
+  {
+    "text": [
+      "On the <PC> <PM> <PS> plane<sp>, is there any <Z2> <C2> <M2> <S2> <OR> the <Z> <C> <M> <S>?",
+      "On the <PC> <PM> <PS> plane<sp>, some <Z2> <C2> <M2> <S2> is <OR> the <Z> <C> <M> <S>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, it is not the case that all the <Z2> <C2> <M2> <S2>s are not <OR> the <Z> <C> <M> <S>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, it is not the case that no <Z2> <C2> <M2> <S2> is <OR> the <Z> <C> <M> <S>; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_unique_valid", "kind": "object"},
+      {"input_states": [2], "value_inputs": ["<OR>", "<Z2>", "<C2>", "<M2>", "<S2>"], "type":  "relate_filter_valid_unlimited", "kind": "object"},
+      {"input_states": [3], "type": "some_relate", "kind": "object"}
+    ],
+    "constraints": [],
+    "quantifiers": ["some"],
+    "type": ["existence2", "spatial_relationship"]
+  },
+  {
+    "text": [
+      "On the <PC> <PM> <PS> plane<sp>, there is no <Z2> <C2> <M2> <S2> <OR> the <Z> <C> <M> <S>?",
+      "On the <PC> <PM> <PS> plane<sp>, no <Z2> <C2> <M2> <S2> is <OR> the <Z> <C> <M> <S>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, every <Z2> <C2> <M2> <S2> is not <OR> the <Z> <C> <M> <S>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, it is not the case that some <Z2> <C2> <M2> <S2> is <OR> the <Z> <C> <M> <S>; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_unique_valid", "kind": "object"},
+      {"input_states": [2], "value_inputs": ["<OR>", "<Z2>", "<C2>", "<M2>", "<S2>"], "type":  "relate_filter_valid_unlimited", "kind": "object"},
+      {"input_states": [3], "type": "no_relate", "kind": "object"}
+    ],
+    "constraints": [],
+    "quantifiers": ["no"],
+    "type": ["existence2", "spatial_relationship"]
+  },
+  {
+    "text": [
+      "On the <PC> <PM> <PS> plane<sp>, are there any but not all of the <Z2> <C2> <M2> <S2>s <OR> the <Z> <C> <M> <S>?",
+      "On the <PC> <PM> <PS> plane<sp>, some but not all of the <Z2> <C2> <M2> <S2>s are <OR> the <Z> <C> <M> <S>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, whether some but not all of the <Z2> <C2> <M2> <S2>s are <OR> the <Z> <C> <M> <S>?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_unique_valid", "kind": "object"},
+      {"input_states": [2], "value_inputs": ["<OR>", "<Z2>", "<C2>", "<M2>", "<S2>"], "type":  "relate_filter_multiple_valid_unlimited", "kind": "object"},
+      {"input_states": [3], "type": "some_but_not_all_relate", "kind": "object"}
+    ],
+    "constraints": [],
+    "quantifiers": ["some_but_not_all"],
+    "type": ["existence2", "spatial_relationship"]
+  },
+  {
+    "text": [
+      "On the <PC> <PM> <PS> plane<sp>, <sa> there at most <OC> <Z2> <C2> <M2> <S2><so> <OR> the <Z> <C> <M> <S>?",
+      "On the <PC> <PM> <PS> plane<sp>, it is not the case that more than <OC> <Z2> <C2> <M2> <S2><so> <sa> <OR> the <Z> <C> <M> <S>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, all the <Z2> <C2> <M2> <S2>s but at most <OC> are not <OR> the <Z> <C> <M> <S>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, at most <OC> <Z2> <C2> <M2> <S2><so> <sa> <OR> the <Z> <C> <M> <S>; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_unique_valid", "kind": "object"},
+      {"input_states": [2], "value_inputs": ["<OR>", "<Z2>", "<C2>", "<M2>", "<S2>"], "type":  "relate_filter", "kind": "object"},
+      {"input_states": [3], "value_inputs": ["<OC>", "<sa>", "<so>"], "type": "at_most_number_relate", "kind": "object"}
+    ],
+    "constraints": [],
+    "quantifiers": ["at_most_number"],
+    "type": ["existence2", "spatial_relationship"]
+  },
+  {
+    "text": [
+      "On the <PC> <PM> <PS> plane<sp>, <sa> there at least <OC> <Z2> <C2> <M2> <S2><so> <OR> the <Z> <C> <M> <S>?",
+      "On the <PC> <PM> <PS> plane<sp>, it is not the case that fewer than <OC> <Z2> <C2> <M2> <S2><so> <sa> <OR> the <Z> <C> <M> <S>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, all the <Z2> <C2> <M2> <S2>s but at least <OC> are not <OR> the <Z> <C> <M> <S>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, at least <OC> <Z2> <C2> <M2> <S2><so> <sa> <OR> the <Z> <C> <M> <S>; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_unique_valid", "kind": "object"},
+      {"input_states": [2], "value_inputs": ["<OR>", "<Z2>", "<C2>", "<M2>", "<S2>"], "type":  "relate_filter", "kind": "object"},
+      {"input_states": [3], "value_inputs": ["<OC>", "<sa>", "<so>"], "type": "at_least_number_relate", "kind": "object"}
+    ],
+    "constraints": [],
+    "quantifiers": ["at_least_number"],
+    "type": ["existence2", "spatial_relationship"]
+  },
+  {
+    "text": [
+      "On the <PC> <PM> <PS> plane<sp>, <sa> there more than <OC> <Z2> <C2> <M2> <S2><so> <OR> the <Z> <C> <M> <S>?",
+      "On the <PC> <PM> <PS> plane<sp>, it is not the case that at most <OC> <Z2> <C2> <M2> <S2><so> <sa> <OR> the <Z> <C> <M> <S>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, it is not the case that all the <Z2> <C2> <M2> <S2>s but at most <OC> are not <OR> the <Z> <C> <M> <S>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, more than <OC> <Z2> <C2> <M2> <S2><so> <sa> <OR> the <Z> <C> <M> <S>; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_unique_valid", "kind": "object"},
+      {"input_states": [2], "value_inputs": ["<OR>", "<Z2>", "<C2>", "<M2>", "<S2>"], "type":  "relate_filter", "kind": "object"},
+      {"input_states": [3], "value_inputs": ["<OC>", "<sa>", "<so>"], "type": "more_than_number_relate", "kind": "object"}
+    ],
+    "constraints": [],
+    "quantifiers": ["more_than_number"],
+    "type": ["existence2", "spatial_relationship"]
+  },
+  {
+    "text": [
+      "On the <PC> <PM> <PS> plane<sp>, <sa> there fewer than <OC> <Z2> <C2> <M2> <S2><so> <OR> the <Z> <C> <M> <S>?",
+      "On the <PC> <PM> <PS> plane<sp>, it is not the case that at least <OC> <Z2> <C2> <M2> <S2><so> <sa> <OR> the <Z> <C> <M> <S>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, it is not the case that all the <Z2> <C2> <M2> <S2>s but at least <OC> are not <OR> the <Z> <C> <M> <S>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, fewer than <OC> <Z2> <C2> <M2> <S2><so> <sa> <OR> the <Z> <C> <M> <S>; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_unique_valid", "kind": "object"},
+      {"input_states": [2], "value_inputs": ["<OR>", "<Z2>", "<C2>", "<M2>", "<S2>"], "type":  "relate_filter", "kind": "object"},
+      {"input_states": [3], "value_inputs": ["<OC>", "<sa>", "<so>"], "type": "fewer_than_number_relate", "kind": "object"}
+    ],
+    "constraints": [],
+    "quantifiers": ["fewer_than_number"],
+    "type": ["existence2", "spatial_relationship"]
+  },
+  {
+    "text": [
+      "On the <PC> <PM> <PS> plane<sp>, <sa> there exactly <OC> <Z2> <C2> <M2> <S2><so> <OR> the <Z> <C> <M> <S>?",
+      "On the <PC> <PM> <PS> plane<sp>, there <sa> exactly <OC> <Z2> <C2> <M2> <S2><so> <OR> the <Z> <C> <M> <S>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, all the <Z2> <C2> <M2> <S2>s but <OC> are not <OR> the <Z> <C> <M> <S>; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_unique_valid", "kind": "object"},
+      {"input_states": [2], "value_inputs": ["<OR>", "<Z2>", "<C2>", "<M2>", "<S2>"], "type":  "relate_filter", "kind": "object"},
+      {"input_states": [3], "value_inputs": ["<OC>", "<sa>", "<so>"], "type": "exact_relate", "kind": "object"}
+    ],
+    "constraints": [],
+    "quantifiers": ["exactly_number"],
+    "type": ["existence2", "spatial_relationship"]
+  },
+  {
+    "text": [
+      "On the <PC> <PM> <PS> plane<sp>, <sa> there between <OC> and <OC2> <Z2> <C2> <M2> <S2><so> <OR> the <Z> <C> <M> <S>?",
+      "On the <PC> <PM> <PS> plane<sp>, between <OC> and <OC2> <Z2> <C2> <M2> <S2><so> <sa> <OR> the <Z> <C> <M> <S>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, <sa> there <OC> to <OC2> <Z2> <C2> <M2> <S2><so> <OR> the <Z> <C> <M> <S>?",
+      "On the <PC> <PM> <PS> plane<sp>, at least <OC> and at most <OC2> <Z2> <C2> <M2> <S2><so> <sa> <OR> the <Z> <C> <M> <S>; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_unique_valid", "kind": "object"},
+      {"input_states": [2], "value_inputs": ["<OR>", "<Z2>", "<C2>", "<M2>", "<S2>"], "type":  "relate_filter_multiple", "kind": "object"},
+      {"input_states": [3], "value_inputs": ["<OC>", "<OC2>", "<so>", "<sa>"], "type": "between_relate", "kind": "object"}
+    ],
+    "constraints": [],
+    "quantifiers": ["between"],
+    "type": ["existence2", "spatial_relationship"]
+  },
+  {
+    "text": [
+      "On the <PC> <PM> <PS> plane<sp>, are all the <Z2> <C2> <M2> <S2>s but at most <OC> <OR> the <Z> <C> <M> <S>?",
+      "On the <PC> <PM> <PS> plane<sp>, it is not the case that more than <OC> <Z2> <C2> <M2> <S2><so> <sa> not <OR> the <Z> <C> <M> <S>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, all the <Z2> <C2> <M2> <S2>s but at most <OC> are <OR> the <Z> <C> <M> <S>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, at most <OC> <Z2> <C2> <M2> <S2><so> <sa> not <OR> the <Z> <C> <M> <S>; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_unique_valid", "kind": "object"},
+      {"input_states": [2], "value_inputs": ["<OR>", "<Z2>", "<C2>", "<M2>", "<S2>"], "type":  "relate_filter_multiple", "kind": "object"},
+      {"input_states": [3], "value_inputs": ["<OC>", "<sa>", "<so>"], "type": "but_most_relate", "kind": "object"}
+    ],
+    "constraints": [],
+    "quantifiers": ["all_but_at_most"],
+    "type": ["existence2", "spatial_relationship"]
+  },
+  {
+    "text": [
+      "On the <PC> <PM> <PS> plane<sp>, are all the <Z2> <C2> <M2> <S2>s but at least <OC> <OR> the <Z> <C> <M> <S>?",
+      "On the <PC> <PM> <PS> plane<sp>, it is not the case that fewer than <OC> <Z2> <C2> <M2> <S2><so> <sa> not <OR> the <Z> <C> <M> <S>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, all the <Z2> <C2> <M2> <S2>s but at least <OC> are <OR> the <Z> <C> <M> <S>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, at least <OC> <Z2> <C2> <M2> <S2><so> <sa> not <OR> the <Z> <C> <M> <S>; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_unique_valid", "kind": "object"},
+      {"input_states": [2], "value_inputs": ["<OR>", "<Z2>", "<C2>", "<M2>", "<S2>"], "type":  "relate_filter_multiple", "kind": "object"},
+      {"input_states": [3], "value_inputs": ["<OC>", "<sa>", "<so>"], "type": "but_least_relate", "kind": "object"}
+    ],
+    "constraints": [],
+    "quantifiers": ["all_but_at_least"],
+    "type": ["existence2", "spatial_relationship"]
+  },
+  {
+    "text": [
+      "On the <PC> <PM> <PS> plane<sp>, are most of the <Z2> <C2> <M2> <S2>s <OR> the <Z> <C> <M> <S>?",
+      "On the <PC> <PM> <PS> plane<sp>, are most <Z2> <C2> <M2> <S2>s <OR> the <Z> <C> <M> <S>?",
+      "On the <PC> <PM> <PS> plane<sp>, most of the <Z2> <C2> <M2> <S2>s are <OR> the <Z> <C> <M> <S>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, most <Z2> <C2> <M2> <S2>s are <OR> the <Z> <C> <M> <S>; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_unique_valid", "kind": "object"},
+      {"input_states": [2], "value_inputs": ["<OR>", "<Z2>", "<C2>", "<M2>", "<S2>"], "type":  "relate_filter_multiple", "kind": "object"},
+      {"input_states": [3], "type": "most_relate", "kind": "object"}
+    ],
+    "constraints": [],
+    "quantifiers": ["most"],
+    "type": ["existence2", "spatial_relationship"]
+  },
+  {
+    "text": [
+      "On the <PC> <PM> <PS> plane<sp>, are more than <OP> of the <Z2> <C2> <M2> <S2>s <OR> the <Z> <C> <M> <S>?",
+      "On the <PC> <PM> <PS> plane<sp>, more than <OP> of the <Z2> <C2> <M2> <S2>s are <OR> the <Z> <C> <M> <S>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, it is not the case that at most <OP> of the <Z2> <C2> <M2> <S2>s are <OR> the <Z> <C> <M> <S>; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_unique_valid", "kind": "object"},
+      {"input_states": [2], "value_inputs": ["<OR>", "<Z2>", "<C2>", "<M2>", "<S2>"], "type":  "relate_filter_multiple", "kind": "object"},
+      {"input_states": [3], "value_inputs": ["<OP>"], "type": "more_than_fractions_relate", "kind": "object"}
+    ],
+    "constraints": [],
+    "quantifiers": ["more_than_fractions"],
+    "type": ["existence2", "spatial_relationship"]
+  },
+  {
+    "text": [
+      "On the <PC> <PM> <PS> plane<sp>, are fewer than <OP> of the <Z2> <C2> <M2> <S2>s <OR> the <Z> <C> <M> <S>?",
+      "On the <PC> <PM> <PS> plane<sp>, fewer than <OP> of the <Z2> <C2> <M2> <S2>s are <OR> the <Z> <C> <M> <S>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, it is not the case that at least <OP> of the <Z2> <C2> <M2> <S2>s are <OR> the <Z> <C> <M> <S>; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_unique_valid", "kind": "object"},
+      {"input_states": [2], "value_inputs": ["<OR>", "<Z2>", "<C2>", "<M2>", "<S2>"], "type":  "relate_filter_multiple", "kind": "object"},
+      {"input_states": [3], "value_inputs": ["<OP>"], "type": "fewer_than_fractions_relate", "kind": "object"}
+    ],
+    "constraints": [],
+    "quantifiers": ["fewer_than_fractions"],
+    "type": ["existence2", "spatial_relationship"]
+  },
+  {
+    "text": [
+      "On the <PC> <PM> <PS> plane<sp>, are at least <OP> of the <Z2> <C2> <M2> <S2>s <OR> the <Z> <C> <M> <S>?",
+      "On the <PC> <PM> <PS> plane<sp>, at least <OP> of the <Z2> <C2> <M2> <S2>s are <OR> the <Z> <C> <M> <S>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, it is not the case that fewer than <OP> of the <Z2> <C2> <M2> <S2>s are <OR> the <Z> <C> <M> <S>; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_unique_valid", "kind": "object"},
+      {"input_states": [2], "value_inputs": ["<OR>", "<Z2>", "<C2>", "<M2>", "<S2>"], "type":  "relate_filter_multiple", "kind": "object"},
+      {"input_states": [3], "value_inputs": ["<OP>"], "type": "at_least_fractions_fractions_relate", "kind": "object"}
+    ],
+    "constraints": [],
+    "quantifiers": ["at_least_fractions"],
+    "type": ["existence2", "spatial_relationship"]
+  },
+  {
+    "text": [
+      "On the <PC> <PM> <PS> plane<sp>, are at most <OP> of the <Z2> <C2> <M2> <S2>s <OR> the <Z> <C> <M> <S>?",
+      "On the <PC> <PM> <PS> plane<sp>, at most <OP> of the <Z2> <C2> <M2> <S2>s are <OR> the <Z> <C> <M> <S>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, it is not the case that more than <OP> of the <Z2> <C2> <M2> <S2>s are <OR> the <Z> <C> <M> <S>; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type": "filter_unique_valid", "kind": "object"},
+      {"input_states": [2], "value_inputs": ["<OR>", "<Z2>", "<C2>", "<M2>", "<S2>"], "type":  "relate_filter_multiple", "kind": "object"},
+      {"input_states": [3], "value_inputs": ["<OP>"], "type": "at_most_fractions_fractions_relate", "kind": "object"}
+    ],
+    "constraints": [],
+    "quantifiers": ["at_most_fractions"],
+    "type": ["existence2", "spatial_relationship"]
+  },
+  {
+    "text": [
+      "On the <PC> <PM> <PS> plane<sp>, no <Z> <C> <M> <S> is not larger than every <Z2> <C2> <M2> <S2>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, all the <Z> <C> <M> <S>s are larger than some <Z2> <C2> <M2> <S2>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, it’s not the case that some <Z> <C> <M> <S> is not larger than all the <Z2> <C2> <M2> <S2>s; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, it’s not the case that all the <Z2> <C2> <M2> <S2> is not smaller than some <Z> <C> <M> <S>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, some <Z2> <C2> <M2> <S2> is smaller than all the <Z> <C> <M> <S>s; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, it is not the case that no <Z2> <C2> <M2> <S2> is smaller than all the <Z> <C> <M> <S>s; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all_valid", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type":  "filter_valid", "kind": "object"},
+      {"input_states": [2], "value_inputs": ["<Z2>", "<C2>", "<M2>", "<S2>"], "type":  "filter_valid", "kind": "object"},
+      {"input_states": [2, 3], "type": "all_larger_some", "kind": "object"}
+    ],
+    "constraints": [
+      {"params": ["<S>", "<S2>"], "type": "NOT_NULL"},
+      {"params": ["<Z>", "<Z2>"], "type": "NULL"},
+      {"params": ["<S>", "<S2>"], "type": "EQ"},
+      {"params": ["<C>", "<M>"], "type": "NOT_ALL_NULL"},
+      {"params": [3, 2], "type": "NOT_CONTAIN"}
+    ],
+    "quantifiers": ["all", "some"],
+    "type": ["compare_size"]
+  },
+  {
+    "text": [
+      "On the <PC> <PM> <PS> plane<sp>, are all the <Z> <C> <M> <S>s smaller than some but not all of the <Z2> <C2> <M2> <S2>s?",
+      "On the <PC> <PM> <PS> plane<sp>, all the <Z> <C> <M> <S>s are smaller than some but not all of the <Z2> <C2> <M2> <S2>s; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, some but not all of the <Z2> <C2> <M2> <S2>s are larger than all the <Z> <C> <M> <S>s; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all_valid", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type":  "filter_valid", "kind": "object"},
+      {"input_states": [2], "value_inputs": ["<Z2>", "<C2>", "<M2>", "<S2>"], "type":  "filter_multiple_valid", "kind": "object"},
+      {"input_states": [2, 3], "type": "all_smaller_someButNotAll", "kind": "object"}
+    ],
+    "constraints": [
+      {"params": ["<S>", "<S2>"], "type": "NOT_NULL"},
+      {"params": ["<Z>", "<Z2>"], "type": "NULL"},
+      {"params": ["<S>", "<S2>"], "type": "EQ"},
+      {"params": ["<C>", "<M>"], "type": "NOT_ALL_NULL"},
+      {"params": [3, 2], "type": "NOT_CONTAIN"}
+    ],
+    "quantifiers": ["all", "some_but_not_all"],
+    "type": ["compare_size"]
+  },
+  {
+    "text": [
+      "On the <PC> <PM> <PS> plane<sp>, some <Z> <C> <M> <S> is larger than some but not all of the <Z2> <C2> <M2> <S2>s; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, it is not the case that no <Z> <C> <M> <S> is larger than some but not all of the <Z2> <C2> <M2> <S2>s; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, some but not all of the <Z2> <C2> <M2> <S2>s are smaller than some <Z> <C> <M> <S>; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all_valid", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type":  "filter_valid", "kind": "object"},
+      {"input_states": [2], "value_inputs": ["<Z2>", "<C2>", "<M2>", "<S2>"], "type":  "filter_multiple_valid", "kind": "object"},
+      {"input_states": [2, 3], "type": "some_larger_someButNotAll", "kind": "object"}
+    ],
+    "constraints": [
+      {"params": ["<S>", "<S2>"], "type": "NOT_NULL"},
+      {"params": ["<Z>", "<Z2>"], "type": "NULL"},
+      {"params": ["<S>", "<S2>"], "type": "EQ"},
+      {"params": ["<C>", "<M>"], "type": "NOT_ALL_NULL"},
+      {"params": [3, 2], "type": "NOT_CONTAIN"}
+    ],
+    "quantifiers": ["some_but_not_all", "some"],
+    "type": ["compare_size"]
+  },
+  {
+    "text": [
+      "On the <PC> <PM> <PS> plane<sp>, <sa> there at least <OC> <Z> <C> <M> <S><so> smaller than exactly <OC2> <Z2> <C2> <M2> <S2><so2>?",
+      "On the <PC> <PM> <PS> plane<sp>, it is not the case that fewer than <OC> <Z> <C> <M> <S><so> <sa> smaller than exactly <OC2> <Z2> <C2> <M2> <S2><so2>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, all the <Z> <C> <M> <S>s but at least <OC> are smaller than fewer or more than <OC2> <Z2> <C2> <M2> <S2><so2>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, exactly <OC2> <Z2> <C2> <M2> <S2><so2> <sa> larger than at least <OC> <Z> <C> <M> <S><so>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, <sa> there exactly <OC2> <Z2> <C2> <M2> <S2><so2> larger than at least <OC> <Z> <C> <M> <S><so>?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type":  "filter_multiple", "kind": "object"},
+      {"input_states": [2], "value_inputs": ["<Z2>", "<C2>", "<M2>", "<S2>"], "type":  "filter_multiple", "kind": "object"},
+      {"input_states": [2, 3], "value_inputs": ["<OC>", "<sa>", "<so>", "<OC2>", "<sa2>", "<so2>"], "type": "atLeastNum_smaller_exact", "kind": "object"}
+    ],
+    "constraints": [
+      {"params": ["<S>", "<S2>"], "type": "NOT_NULL"},
+      {"params": ["<Z>", "<Z2>"], "type": "BOTH_SIZE_BUT_NULL"},
+      {"params": ["<S>", "<S2>"], "type": "EQ"}
+    ],
+    "quantifiers": ["at_least_number", "exactly_number"],
+    "type": ["compare_size"]
+  },
+  {
+    "text": [
+      "On the <PC> <PM> <PS> plane<sp>, <sa> there at least <OC> <Z> <C> <M> <S><so> larger than more than <OC2> <Z2> <C2> <M2> <S2><so2>?",
+      "On the <PC> <PM> <PS> plane<sp>, it is not the case that fewer than <OC> <Z> <C> <M> <S><so> <sa> larger than more than <OC2> <Z2> <C2> <M2> <S2><so2>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, all the <Z> <C> <M> <S>s but at least <OC> are larger than at most <OC2> <Z2> <C2> <M2> <S2><so2>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, more than <OC2> <Z2> <C2> <M2> <S2><so2> <sa2> smaller than at least <OC> <Z> <C> <M> <S><so>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, it is not the case that at most <OC2> <Z2> <C2> <M2> <S2><so2> <sa2> smaller than at least <OC> <Z> <C> <M> <S><so>; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_multiple", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type":  "filter_multiple", "kind": "object"},
+      {"input_states": [2], "value_inputs": ["<Z2>", "<C2>", "<M2>", "<S2>"], "type":  "filter_multiple", "kind": "object"},
+      {"input_states": [2, 3], "value_inputs": ["<OC>", "<sa>", "<so>", "<OC2>", "<sa2>", "<so2>"], "type": "atLeastNum_larger_moreThanNumber", "kind": "object"}
+    ],
+    "constraints": [
+      {"params": ["<S>", "<S2>"], "type": "NOT_NULL"},
+      {"params": ["<Z>", "<Z2>"], "type": "BOTH_SIZE_BUT_NULL"},
+      {"params": ["<S>", "<S2>"], "type": "EQ"}
+    ],
+    "quantifiers": ["at_least_number", "more_than_number"],
+    "type": ["compare_size"]
+  },
+  {
+    "text": [
+      "On the <PC> <PM> <PS> plane<sp>, are there more than <OP> of the <Z> <C> <M> <S>s larger than between <OC> and <OC2> <Z2> <C2> <M2> <S2><so2>?",
+      "On the <PC> <PM> <PS> plane<sp>, more than <OP> of the <Z> <C> <M> <S>s are larger than between <OC> and <OC2> <Z2> <C2> <M2> <S2><so2>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, it is not the case that at most <OP> of the <Z> <C> <M> <S>s are larger than <OC> to <OC2> <Z2> <C2> <M2> <S2><so2>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, at least <OC> and at most <OC2> <Z2> <C2> <M2> <S2><so2> <sa2> smaller than more than <OP> of the <Z> <C> <M> <S>s; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, <OC> to <OC2> <Z2> <C2> <M2> <S2><so2> <sa2> smaller than more than <OP> of the <Z> <C> <M> <S>s; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_multiple", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type":  "filter_multiple", "kind": "object"},
+      {"input_states": [2], "value_inputs": ["<Z2>", "<C2>", "<M2>", "<S2>"], "type":  "filter_multiple", "kind": "object"},
+      {"input_states": [2, 3], "value_inputs": ["<OP>", "<OC>", "<OC2>", "<sa2>", "<so2>"], "type": "moreThanFractions_larger_between", "kind": "object"}
+    ],
+    "constraints": [
+      {"params": ["<S>", "<S2>"], "type": "NOT_NULL"},
+      {"params": ["<Z>", "<Z2>"], "type": "BOTH_SIZE_BUT_NULL"},
+      {"params": ["<S>", "<S2>"], "type": "EQ"}
+    ],
+    "quantifiers": ["more_than_fractions", "between"],
+    "type": ["compare_size"]
+  },
+  {
+    "text": [
+      "On the <PC> <PM> <PS> plane<sp>, are all the <Z> <C> <M> <S>s but at least <OC> smaller than fewer than <OP> of the <Z2> <C2> <M2> <S2>s?",
+      "On the <PC> <PM> <PS> plane<sp>, at least <OC> <Z> <C> <M> <S><so> <sa> smaller than at least <OP> of the <Z2> <C2> <M2> <S2>s; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, all the <Z> <C> <M> <S>s but at least <OC> are smaller than fewer than <OP> of the <Z2> <C2> <M2> <S2>s; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, at least <OP> of the <Z2> <C2> <M2> <S2>s are larger than at least <OC> <Z> <C> <M> <S><so>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, it is not the case that fewer than <OP> of the <Z2> <C2> <M2> <S2>s are larger than at least <OC> <Z> <C> <M> <S><so>; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type":  "filter_multiple", "kind": "object"},
+      {"input_states": [2], "value_inputs": ["<Z2>", "<C2>", "<M2>", "<S2>"], "type":  "filter_multiple", "kind": "object"},
+      {"input_states": [2, 3], "value_inputs": ["<OC>", "<sa>", "<so>", "<OP>"], "type": "atLeastNum_smaller_atLeastFractions", "kind": "object"}
+    ],
+    "constraints": [
+      {"params": ["<S>", "<S2>"], "type": "NOT_NULL"},
+      {"params": ["<Z>", "<Z2>"], "type": "BOTH_SIZE_BUT_NULL"},
+      {"params": ["<S>", "<S2>"], "type": "EQ"}
+    ],
+    "quantifiers": ["at_least_number", "at_least_fractions"],
+    "type": ["compare_size"]
+  },
+  {
+    "text": [
+      "On the <PC> <PM> <PS> plane<sp>, <sa> there exactly <OC> <Z> <C> <M> <S><so> smaller than between <OC2> and <OC3> <Z2> <C2> <M2> <S2><so2>?",
+      "On the <PC> <PM> <PS> plane<sp>, exactly <OC> <Z> <C> <M> <S><so> <sa> smaller than between <OC2> and <OC3> <Z2> <C2> <M2> <S2><so2>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, all <Z> <C> <M> <S>s but <OC> are smaller than fewer than <OC2> or more than <OC3> <Z2> <C2> <M2> <S2><so2>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, between <OC2> and <OC3> <Z2> <C2> <M2> <S2><so2> <sa2> larger than exactly <OC> <Z> <C> <M> <S><so>; is it right?",
+      "On the <PC> <PM> <PS> plane<sp>, at least <OC2> and at most <OC3> <Z2> <C2> <M2> <S2><so2> <sa2> larger than exactly <OC> <Z> <C> <M> <S><so>; is it right?"
+    ],
+    "nodes": [
+      {"input_states": [], "type": "scene", "kind": "scene"},
+      {"input_states": [0], "value_inputs": ["<PC>", "<PM>", "<PS>", "<sp>"], "type": "filter_all", "kind": "plane"},
+      {"input_states": [1], "value_inputs": ["<Z>", "<C>", "<M>", "<S>"], "type":  "filter_multiple", "kind": "object"},
+      {"input_states": [2], "value_inputs": ["<Z2>", "<C2>", "<M2>", "<S2>"], "type":  "filter_multiple", "kind": "object"},
+      {"input_states": [2, 3], "value_inputs": ["<OC>", "<sa>", "<so>", "<OC2>", "<OC3>", "<sa2>", "<so2>"], "type": "exact_smaller_between", "kind": "object"}
+    ],
+    "constraints": [
+      {"params": ["<S>", "<S2>"], "type": "NOT_NULL"},
+      {"params": ["<Z>", "<Z2>"], "type": "BOTH_SIZE_BUT_NULL"},
+      {"params": ["<S>", "<S2>"], "type": "EQ"}
+    ],
+    "quantifiers": ["exactly_number", "between"],
+    "type": ["compare_size"]
+  }
+]
