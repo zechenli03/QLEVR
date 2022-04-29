@@ -4,6 +4,7 @@ This is the code used to generate the QLEVR dataset as described in the paper:
 
 **[QLEVR: A Diagnostic Dataset for Quantificational Language and Elementary Visual 
 Reasoning](https://openreview.net/forum?id=H5fJuibHW9&referrer=[the%20profile%20of%20Zechen%20Li](/profile?id=~Zechen_Li1))**
+
 Presented at Findings of NAACL 2022
 
 The QLEVR dataset [can be found here](https://drive.google.com/drive/folders/1s0n4CQXr1IDmBVUymYH51iC1MF54jyhN?usp=sharing).
@@ -59,7 +60,7 @@ The file `output/2d_scene/train/scenes_2d_train.json` will contain ground-truth 
 and relationships for the planes and objects for these images.
 
 ## Step 2: Generating 3D Images
-Second, we render synthetic 3D images using [Blender 2.92](https://www.blender.org/). 
+Second, we render synthetic 3D images using [Blender 2.93](https://www.blender.org/). 
 
 [Here](https://github.com/sujeendran/BlenderRenderWithColab/blob/main/BlenderRenderWithColab.ipynb) is a tutorial about 
 running command-line Blender renders on Google Colab for fast rendering. 
