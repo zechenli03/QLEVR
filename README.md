@@ -3,7 +3,7 @@
 This is the code used to generate the QLEVR dataset as described in the paper:
 
 **[QLEVR: A Diagnostic Dataset for Quantificational Language and Elementary Visual 
-Reasoning](https://openreview.net/forum?id=H5fJuibHW9&referrer=[the%20profile%20of%20Zechen%20Li](/profile?id=~Zechen_Li1))**
+Reasoning](https://arxiv.org/abs/2205.03075)**
 
 Presented at Findings of NAACL 2022
 
