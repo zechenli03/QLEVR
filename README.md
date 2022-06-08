@@ -25,13 +25,13 @@ You can use this code to generate 2D images, render synthetic 3D images and gene
   <img src="images/overview.png" width="1000px">
 </div>
 
-If you find this code useful, please cite
+If you find this code useful, please cite as
 
 ```
 @inproceedings{li2022qlevr,
   title={QLEVR: A Diagnostic Dataset for Quantificational Language and Elementary Visual Reasoning},
   author={Li, Zechen and Søgaard, Anders},
-  booktitle={Findings of the Association for Computational Linguistics: NAACL},
+  booktitle={Findings of NAACL},
   year={2022}
 }
 ```
